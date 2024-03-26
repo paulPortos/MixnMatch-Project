@@ -1,0 +1,45 @@
+.label-h1{
+    -fx-font-size: 32px;
+}
+
+.selection-box-button{
+    -fx-background-color: #239c9c;
+    -fx-background-radius: 10px;
+    -fx-min-width: 205px;
+    -fx-min-height: 90px;
+    -fx-max-width: 320px;
+    -fx-max-height: 120px;
+}
+
+.image_view-selectionScreen {
+        -fx-min-width: 100px;
+        -fx-min-height: 100px;
+        -fx-max-width: 100px;
+        -fx-max-height: 100px;
+}
+.background-side-panel {
+    -fx-background-color: #2c9c67;
+}
+.background-right-side_selectionScreen{
+
+}
+.selection-box-button: hover {
+    -fx-background-color: #07f7f7;
+    -fx-background-radius: 10px;
+}
+.startMenu-background {
+    -fx-background-image: url('../images/startScreen-Background.jpg');
+    -fx-background-size: cover;
+}
+.label-startMenu {
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 255, 0.8), 15, 0, 0, 0);
+    -fx-text-fill: white;
+}
+.classroom-background-selection {
+    -fx-background-image: url('../images/startMenu.jpeg');
+    -fx-background-size: cover;
+}
+.f1Motorsport-background-selection {
+    -fx-background-image: url('../images/startScreen-Background.jpg');
+    -fx-background-size: cover;
+}

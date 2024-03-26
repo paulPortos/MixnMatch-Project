@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="752.0" prefWidth="786.0" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.mixnmatchproject.MainController">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="56.0" prefWidth="94.0" stylesheets="@css/main.css" text="Back" />
+      <Label alignment="CENTER" layoutX="259.0" layoutY="161.0" prefHeight="56.0" prefWidth="268.0" styleClass="label-h1" text="INSTRUCTIONS: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="244.0" prefHeight="45.0" prefWidth="298.0" stylesheets="@css/main.css" text="1) Choose from our available theme">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="310.0" prefHeight="46.0" prefWidth="331.0" text="2) Match 2 pictures in order to get points">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
