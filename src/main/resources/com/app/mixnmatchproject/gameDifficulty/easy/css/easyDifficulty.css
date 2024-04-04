@@ -1,0 +1,15 @@
+.classroomgame-buttons {
+    -fx-background-color: #ffe5ea;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+.classroomgame-buttons: hover {
+    -fx-background-color: #ffccd5;
+    -fx-background-radius: 10px;
+}
+.background{
+    -fx-background-color: #ffc0cb;
+}
+.timer-background{
+    -fx-background-color: #c481a7;
+}

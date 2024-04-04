@@ -1,7 +1,6 @@
 .label-h1{
     -fx-font-size: 32px;
 }
-
 .selection-box-button{
     -fx-background-color: #239c9c;
     -fx-background-radius: 10px;
@@ -10,7 +9,6 @@
     -fx-max-width: 320px;
     -fx-max-height: 120px;
 }
-
 .image_view-selectionScreen {
         -fx-min-width: 100px;
         -fx-min-height: 100px;

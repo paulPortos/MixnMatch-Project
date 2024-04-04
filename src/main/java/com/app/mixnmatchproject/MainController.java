@@ -11,21 +11,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-
 import java.io.IOException;
 import java.util.Objects;
-
 public class MainController {
     @FXML
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private Parent classroomGamefx;
-    private Parent f1MotorSportfx;
-    private Parent safarifx;
-    private Parent underTheSeafx;
     @FXML
     ImageView category;
     Image classroomImage;
@@ -75,10 +69,10 @@ public class MainController {
     }
 
     public void playerChoiceChecker(ActionEvent e) throws IOException{
-        classroomGamefx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ClassroomGame.fxml")));
-        safarifx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("F1MotorSportGame.fxml")));
-        f1MotorSportfx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("F1MotorSportGame.fxml")));
-        underTheSeafx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("F1MotorSportGame.fxml")));
+        Parent classroomGamefx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyClassroomGame.fxml")));
+        Parent safarifx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyF1MotorSportGame.fxml")));
+        Parent f1MotorSportfx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyF1MotorSportGame.fxml")));
+        Parent underTheSeafx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyF1MotorSportGame.fxml")));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         if(classroomPlay){
             scene = new Scene(classroomGamefx);
@@ -100,7 +94,7 @@ public class MainController {
     }
 
     public void switchToSelectionScene(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SelectionWindow.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ThemeSelectionWindow.fxml")));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -131,4 +125,5 @@ public class MainController {
             System.exit(0);
         }
     }
+
 }
