@@ -7,9 +7,9 @@
 
 <AnchorPane prefHeight="752.0" prefWidth="786.0" styleClass="startMenu-background" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.mixnmatchproject.MainController">
    <children>
-      <Button layoutX="313.0" layoutY="376.0" mnemonicParsing="false" onAction="#switchToSelectionScene" prefHeight="47.0" prefWidth="147.0" stylesheets="@css/main.css" text="Enter Game" />
-      <Button layoutX="313.0" layoutY="432.0" mnemonicParsing="false" onAction="#switchToInstruction" prefHeight="47.0" prefWidth="147.0" text="Instructions" />
-      <Button layoutX="313.0" layoutY="490.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="47.0" prefWidth="147.0" text="Quit" />
+      <Button layoutX="313.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToDifficultySelectionWindow" prefHeight="47.0" prefWidth="147.0" stylesheets="@css/main.css" text="Enter Game" />
+      <Button layoutX="313.0" layoutY="474.0" mnemonicParsing="false" onAction="#switchToInstruction" prefHeight="47.0" prefWidth="147.0" text="Instructions" />
+      <Button layoutX="313.0" layoutY="540.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="47.0" prefWidth="147.0" text="Quit" />
       <Label alignment="CENTER" layoutY="143.0" prefHeight="128.0" prefWidth="786.0" styleClass="label-startMenu" stylesheets="@css/main.css" text="Mix n Match">
          <font>
             <Font size="46.0" />
@@ -20,5 +20,6 @@
             <Font size="46.0" />
          </font>
       </Label>
+      <Button layoutX="313.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToHighScoreScene" prefHeight="47.0" prefWidth="147.0" stylesheets="@css/main.css" text="High Score" />
    </children>
 </AnchorPane>

@@ -1,23 +1,29 @@
 package com.app.mixnmatchproject;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
+import java.io.IOException;
+import java.util.Objects;
+
+
 @SuppressWarnings("CallToPrintStackTrace")
 public class ClassroomGameController {
-
-
 
     @FXML
     Button classroomGame_btn1;
@@ -82,9 +88,56 @@ public class ClassroomGameController {
     ImageView btn16_classroom;
     ImageView btn17_classroom;
     ImageView btn18_classroom;
-
+    @FXML
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
     private static String btn1ImageName;
     private static String btn2ImageName;
+
+    @FXML
+    private Label timerLabel;
+    private Timeline timeline;
+
+    private int secondsElapsed = 0;
+    public void initialize() {
+        // Create a Timeline to update the timerLabel every second
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            secondsElapsed++;
+            updateTimerLabel();
+            if (secondsElapsed == 10) {
+                try {
+                    switchToStartMenu();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE); // Run the timeline indefinitely
+        timeline.play(); // Start the timeline
+    }
+
+    private void updateTimerLabel() {
+        timerLabel.setText("Time: " + secondsElapsed + " seconds");
+    }
+
+    private void switchToStartMenu() throws Exception {
+        // Stop the timeline
+        timeline.stop();
+
+        // Load StartMenu.fxml
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartMenu.fxml")));
+        // Get the current stage
+        Stage stage = (Stage) timerLabel.getScene().getWindow();
+        // Create a new scene with StartMenu.fxml
+        Scene scene = new Scene(root);
+        // Set the scene to the stage
+        stage.setScene(scene);
+        // Show the stage
+        stage.show();
+    }
+
+
     public void showContentBtn1_classroom(){
         String imageName = btn1ImageName;
 
