@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23172a70-53ca-490d-b266-707179b02cb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/TimerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/HighScore.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionHard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionMedium.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/StartMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/StartMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/TimerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/popUpWindow.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaFXApplication" />
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -60,7 +63,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/javafx-sdk-17.0.10/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vahro/IdeaProjects/MixnMatch-Project&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -68,11 +71,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject" />
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\java\com\app\mixnmatchproject" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\gameDifficulty\medium" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\gameDifficulty\easy\css" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\gameDifficulty\easy" />
-      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\gameDifficulty" />
-      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.app.mixnmatchproject" />
@@ -105,5 +108,16 @@
       <updated>1710112769712</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

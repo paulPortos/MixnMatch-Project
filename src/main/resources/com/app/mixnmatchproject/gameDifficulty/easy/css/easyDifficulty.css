@@ -13,3 +13,32 @@
 .timer-background{
     -fx-background-color: #c481a7;
 }
+.button{
+    -fx-background-color: #c481a7;
+}
+.menu-background{
+    -fx-background-color: #cbc1ae ;
+}
+.transparent-background {
+    -fx-background-color: transparent;
+}
+.bottom-navigation-button {
+    -fx-background-color: #cbc1ae ;
+}
+.start-button {
+    -fx-background-color: #808080; /* Grey color */
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 0, 0); /* Shadow effect */
+    -fx-background-radius: 5; /* Rounded corners */
+    -fx-padding: 10; /* Add padding for better visibility */
+    -fx-text-fill: white; /* Text color */
+}
+/* Style on hover */
+.start-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 0); /* Dark shadow effect on hover */
+    -fx-opacity: 1; /* Restore full opacity on hover */
+}
+.start-button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 0); /* Dark shadow effect when pressed */
+    -fx-transition: opacity 1.5s; /* Apply transition effect to opacity over 1.5 seconds */
+    -fx-opacity: 0; /* Set initial opacity to 0 */
+}

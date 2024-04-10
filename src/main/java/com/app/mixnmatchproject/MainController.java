@@ -35,7 +35,7 @@ public class MainController {
     public boolean underTheSeaPlay;
 
     @FXML
-    public void displayClassroomSelection() {
+    public void displayClassroomSelectionEasy() {
         classroomImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Books.jpg")));
         category.setImage(classroomImage);
         classroomPlay = true;
@@ -43,7 +43,7 @@ public class MainController {
         safariPlay = false;
         underTheSeaPlay = false;
     }
-    public void displayF1MotorSportsSelection() {
+    public void displayF1MotorSportsSelectionEasy() {
         f1MotorsportImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Notebooks_.jpg")));
         category.setImage(f1MotorsportImage);
         classroomPlay = false;
@@ -51,7 +51,7 @@ public class MainController {
         safariPlay = false;
         underTheSeaPlay = false;
     }
-    public void displaySafariSelection() {
+    public void displaySafariSelectionEasy() {
         safari = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Desk.jpg")));
         category.setImage(safari);
         classroomPlay = false;
@@ -59,7 +59,7 @@ public class MainController {
         safariPlay = true;
         underTheSeaPlay = false;
     }
-    public void displayUnderTheSeaSelection() {
+    public void displayUnderTheSeaSelectionEasy() {
         underTheSea = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Pencil.png")));
         category.setImage(underTheSea);
         classroomPlay = false;
@@ -67,10 +67,10 @@ public class MainController {
         safariPlay = false;
         underTheSeaPlay = true;
     }
-    public void noFunction(){
+
+    public void noFunc(){
         System.out.println();
     }
-
     public void playerChoiceChecker(ActionEvent e) throws IOException{
         Parent classroomGamefx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyClassroomGame.fxml")));
         Parent safarifx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyF1MotorSportGame.fxml")));
@@ -103,6 +103,23 @@ public class MainController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchToMediumSelectionScene(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ThemeSelectionHard.fxml")));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToHardSelectionScene(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ThemeSelectionHard.fxml")));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void switchToDifficultySelectionWindow(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("DifficultySelectionWindow.fxml")));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -110,6 +127,7 @@ public class MainController {
         stage.setScene(scene);
         stage.show();
     }
+
     public void switchToHighScoreScene(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HighScore.fxml")));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
