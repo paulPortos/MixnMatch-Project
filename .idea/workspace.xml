@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23172a70-53ca-490d-b266-707179b02cb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionHard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionMedium.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/TimerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/popUpWindow.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

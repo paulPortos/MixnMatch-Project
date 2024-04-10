@@ -4,8 +4,10 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -15,10 +17,16 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.jetbrains.annotations.NotNull;
+
+import java.io.IOException;
 import java.util.Objects;
 @SuppressWarnings("CallToPrintStackTrace")
 public class ClassroomGameController {
     @FXML
+    private Scene scene;
+    @FXML
+    private Parent root;
     public Pane borderPane;
     public Button startButton;
     public Pane menuPane;
@@ -134,7 +142,6 @@ public class ClassroomGameController {
         timerLabel.setText("Time: " + formattedTime);
     }
     public void openGameMenu(){
-
         if(menuClicked){
             timeline.play();
             restrictions(true);
@@ -147,13 +154,47 @@ public class ClassroomGameController {
             setButtonsVisible();
         }
     }
+
+    @FXML
+    public void switchToDifficultySelectionWindow(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("DifficultySelectionWindow.fxml")));
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
     public void setButtonsInvisible(){
         menuVbox.setStyle("-fx-background-color: transparent; ");
-        resumeButton.setStyle("-fx-background-color: transparent; " + "-fx-text: \"\"; ");
+
+        resumeButton.setStyle("-fx-background-color: transparent; ");
+        resumeButton.setText("");
+
+        newGameButton.setStyle("-fx-background-color: transparent; ");
+        newGameButton.setText("");
+
+        soundsButton.setStyle("-fx-background-color: transparent; ");
+        soundsButton.setText("");
+
+        exitButton.setStyle("-fx-background-color: transparent; ");
+        exitButton.setText("");
     }
+
     public void setButtonsVisible(){
         menuVbox.setStyle("-fx-background-color: #c481a7; ");
-        resumeButton.setStyle("-fx-background-color: #ffccd5; " + "-fx-text: \"Resume\"; ");
+
+        resumeButton.setStyle("-fx-background-color: #ffccd5; ");
+        resumeButton.setText("Resume");
+
+        newGameButton.setStyle("-fx-background-color: #ffccd5; ");
+        newGameButton.setText("New Game");
+
+        soundsButton.setStyle("-fx-background-color: #ffccd5; ");
+        soundsButton.setText("Sounds");
+
+        exitButton.setStyle("-fx-background-color: #ffccd5; ");
+        exitButton.setText("Exit");
     }
 
     private void switchToStartMenu() throws Exception {
