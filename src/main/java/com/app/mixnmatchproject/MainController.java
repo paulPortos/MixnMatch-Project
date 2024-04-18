@@ -44,7 +44,7 @@ public class MainController {
         underTheSeaPlay = false;
     }
     public void displayF1MotorSportsSelectionEasy() {
-        f1MotorsportImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Notebooks_.jpg")));
+        f1MotorsportImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Notebooks.jpg")));
         category.setImage(f1MotorsportImage);
         classroomPlay = false;
         f1MotorSportPlay = true;
