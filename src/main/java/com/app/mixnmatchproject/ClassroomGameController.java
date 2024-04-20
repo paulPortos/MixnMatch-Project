@@ -5,6 +5,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -19,6 +20,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import java.io.IOException;
 import java.util.Objects;
+import java.util.Random;
 
 @SuppressWarnings("CallToPrintStackTrace")
 public class ClassroomGameController {
@@ -31,89 +33,469 @@ public class ClassroomGameController {
     public Button newGameButton;
     public Button soundsButton;
     public Button exitButton;
-    @FXML
-    Button classroomGame_btn1;
-    @FXML
-    Button classroomGame_btn2;
-    @FXML
-    Button classroomGame_btn3;
-    @FXML
-    Button classroomGame_btn4;
-    @FXML
-    Button classroomGame_btn5;
-    @FXML
-    Button classroomGame_btn6;
-    @FXML
-    Button classroomGame_btn7;
-    @FXML
-    Button classroomGame_btn8;
-    @FXML
-    Button classroomGame_btn9;
-    @FXML
-    Button classroomGame_btn10;
-    @FXML
-    Button classroomGame_btn11;
-    @FXML
-    Button classroomGame_btn12;
-    @FXML
-    Button classroomGame_btn13;
-    @FXML
-    Button classroomGame_btn14;
-    @FXML
-    Button classroomGame_btn15;
-    @FXML
-    Button classroomGame_btn16;
-    @FXML
-    Button classroomGame_btn17;
-    @FXML
-    Button classroomGame_btn18;
-    @FXML
-    Button classroomGame_btn20;
-    @FXML
-    Button classroomGame_btn19;
+    public Button btn1;
+    public Button btn2;
+    public Button btn3;
+    public Button btn4;
+    public Button btn5;
+    public Button btn6;
+    public Button btn7;
+    public Button btn8;
+    public Button btn9;
+    public Button btn10;
+    public Button btn11;
+    public Button btn12;
+    public Button btn13;
+    public Button btn14;
+    public Button btn15;
+    public Button btn16;
+    public Button btn17;
+    public Button btn18;
+    public Button btn19;
+    public Button btn20;
+    public ImageView btn1_imageView;
+    public ImageView btn2_imageView;
+    public ImageView btn3_imageView;
+    public ImageView btn4_imageView;
+    public ImageView btn5_imageView;
+    public ImageView btn6_imageView;
+    public ImageView btn7_imageView;
+    public ImageView btn8_imageView;
+    public ImageView btn9_imageView;
+    public ImageView btn10_imageView;
+    public ImageView btn11_imageView;
+    public ImageView btn12_imageView;
+    public ImageView btn13_imageView;
+    public ImageView btn14_imageView;
+    public ImageView btn15_imageView;
+    public ImageView btn16_imageView;
+    public ImageView btn17_imageView;
+    public ImageView btn18_imageView;
+    public ImageView btn19_imageView;
+    public ImageView btn20_imageView;
+
     @FXML
     private Stage stage;
     private Scene scene;
     private Parent root;
-    private boolean isImageShown = false;
-    public Button lastClickedButton = null;
-    private boolean thirdButtonClicked = false;
-    private Button thirdButton = null;
-    ImageView btn1_classroom;
-    ImageView btn2_classroom;
-    ImageView btn3_classroom;
-    ImageView btn4_classroom;
-    ImageView btn5_classroom;
-    ImageView btn6_classroom;
-    ImageView btn7_classroom;
-    ImageView btn8_classroom;
-    ImageView btn9_classroom;
-    ImageView btn10_classroom;
-    ImageView btn11_classroom;
-    ImageView btn12_classroom;
-    ImageView btn13_classroom;
-    ImageView btn14_classroom;
-    ImageView btn15_classroom;
-    ImageView btn16_classroom;
-    ImageView btn17_classroom;
-    ImageView btn18_classroom;
-    ImageView btn19_classroom;
-    ImageView btn20_classroom;
-    private static String btn1ImageName;
-    private static String btn2ImageName;
     @FXML
     private Label timerLabel;
     private Timeline timeline;
     private int secondsElapsed = 0;
     public boolean menuClicked = false;
+    boolean [] buttonsOpen = new boolean[20];
+    String [] picturesUrl = new String[20];
+    String [] url0 = {
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
+    };
+    String [] url1 = {
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg",
 
+    };
     @FXML
     public void pressStart(){
         restrictions(true);
         startTime();
         startButton.setDisable(true);
         startButton.setVisible(false);
-        // ...
+        falseAllButton();
+        getUrlNumber();
+    }
+    public void getUrlNumber(){
+        Random random = new Random();
+
+        // Generate a random number between 0 and 2 (inclusive)
+        int randomNumber = random.nextInt(2); // 3 specifies the upper bound (exclusive)
+        if (randomNumber == 0){
+            for (int i = 0; i < picturesUrl.length; i++){
+                picturesUrl[i] = url0[i];
+            }
+        } else {
+            for (int i = 0; i < picturesUrl.length; i++){
+                picturesUrl[i] = url1[i];
+            }
+        }
+
+        System.out.println(randomNumber);
+        x = randomNumber;
+    }
+    int x;
+    int y = 0;
+    public void match_Checker() throws Exception {
+        if (x == 0){
+            if(buttonsOpen[0] && buttonsOpen[6]){
+                btn1.setDisable(true);
+                btn7.setDisable(true);
+                buttonsOpen[0] = !buttonsOpen[0];
+                buttonsOpen[6] = !buttonsOpen[6];
+                y++;
+            } else if (buttonsOpen[1] && buttonsOpen[10]){
+                btn2.setDisable(true);
+                btn11.setDisable(true);
+                buttonsOpen[1] = !buttonsOpen[1];
+                buttonsOpen[10] = !buttonsOpen[10];
+                y++;
+            } else if (buttonsOpen[2] && buttonsOpen[4]){
+                btn3.setDisable(true);
+                btn5.setDisable(true);
+                buttonsOpen[2] = !buttonsOpen[2];
+                buttonsOpen[4] = !buttonsOpen[4];
+                y++;
+            } else if (buttonsOpen[3] && buttonsOpen[16]){
+                btn4.setDisable(true);
+                btn17.setDisable(true);
+                buttonsOpen[3] = !buttonsOpen[3];
+                buttonsOpen[16] = !buttonsOpen[16];
+                y++;
+            } else if (buttonsOpen[5] && buttonsOpen[8]){
+                btn6.setDisable(true);
+                btn9.setDisable(true);
+                buttonsOpen[5] = !buttonsOpen[5];
+                buttonsOpen[8] = !buttonsOpen[8];
+                y++;
+            } else if (buttonsOpen[7] && buttonsOpen[9]){
+                btn8.setDisable(true);
+                btn10.setDisable(true);
+                buttonsOpen[7] = !buttonsOpen[7];
+                buttonsOpen[9] = !buttonsOpen[9];
+                y++;
+            }else if (buttonsOpen[11] && buttonsOpen[13]){
+                btn12.setDisable(true);
+                btn14.setDisable(true);
+                buttonsOpen[11] = !buttonsOpen[11];
+                buttonsOpen[13] = !buttonsOpen[13];
+                y++;
+            } else if (buttonsOpen[12] && buttonsOpen[14]){
+                btn13.setDisable(true);
+                btn15.setDisable(true);
+                buttonsOpen[12] = !buttonsOpen[12];
+                buttonsOpen[14] = !buttonsOpen[14];
+                y++;
+            }  else if (buttonsOpen[15] && buttonsOpen[18]){
+                btn16.setDisable(true);
+                btn19.setDisable(true);
+                buttonsOpen[15] = !buttonsOpen[15];
+                buttonsOpen[18] = !buttonsOpen[18];
+                y++;
+            } else if (buttonsOpen[17] && buttonsOpen[19]){
+                btn18.setDisable(true);
+                btn20.setDisable(true);
+                buttonsOpen[17] = !buttonsOpen[17];
+                buttonsOpen[19] = !buttonsOpen[19];
+                y++;
+            }
+        } else{
+            if(buttonsOpen[0] && buttonsOpen[18]){
+                btn1.setDisable(true);
+                btn19.setDisable(true);
+                buttonsOpen[0] = !buttonsOpen[0];
+                buttonsOpen[18] = !buttonsOpen[18];
+                y++;
+            } else if (buttonsOpen[1] && buttonsOpen[12]){
+                btn2.setDisable(true);
+                btn13.setDisable(true);
+                buttonsOpen[1] = !buttonsOpen[1];
+                buttonsOpen[12] = !buttonsOpen[12];
+                y++;
+            } else if (buttonsOpen[2] && buttonsOpen[4]){
+                btn3.setDisable(true);
+                btn5.setDisable(true);
+                buttonsOpen[2] = !buttonsOpen[2];
+                buttonsOpen[4] = !buttonsOpen[4];
+                y++;
+            } else if (buttonsOpen[3] && buttonsOpen[5]){
+                btn4.setDisable(true);
+                btn6.setDisable(true);
+                buttonsOpen[3] = !buttonsOpen[3];
+                buttonsOpen[5] = !buttonsOpen[5];
+                y++;
+            } else if (buttonsOpen[6] && buttonsOpen[9]){
+                btn7.setDisable(true);
+                btn10.setDisable(true);
+                buttonsOpen[6] = !buttonsOpen[6];
+                buttonsOpen[9] = !buttonsOpen[9];
+                y++;
+            } else if (buttonsOpen[7] && buttonsOpen[14]){
+                btn8.setDisable(true);
+                btn15.setDisable(true);
+                buttonsOpen[7] = !buttonsOpen[7];
+                buttonsOpen[14] = !buttonsOpen[14];
+                y++;
+            }else if (buttonsOpen[8] && buttonsOpen[10]){
+                btn9.setDisable(true);
+                btn11.setDisable(true);
+                buttonsOpen[8] = !buttonsOpen[8];
+                buttonsOpen[10] = !buttonsOpen[10];
+                y++;
+            } else if (buttonsOpen[11] && buttonsOpen[17]){
+                btn12.setDisable(true);
+                btn18.setDisable(true);
+                buttonsOpen[11] = !buttonsOpen[11];
+                buttonsOpen[17] = !buttonsOpen[17];
+                y++;
+            }  else if (buttonsOpen[16] && buttonsOpen[19]){
+                btn17.setDisable(true);
+                btn20.setDisable(true);
+                buttonsOpen[16] = !buttonsOpen[16];
+                buttonsOpen[19] = !buttonsOpen[19];
+                y++;
+            } else if (buttonsOpen[13] && buttonsOpen[15]){
+                btn14.setDisable(true);
+                btn16.setDisable(true);
+                buttonsOpen[13] = !buttonsOpen[13];
+                buttonsOpen[15] = !buttonsOpen[15];
+                y++;
+            }
+        }
+        openTwoButtonsOnly();
+        if (y==10){
+            switchToStartMenu();
+        }
+    }
+
+    public void openTwoButtonsOnly() {
+        int[] btnNumberStore = new int[2];
+        int trueValue = 0;
+        for (int i = 0; i < buttonsOpen.length; i++) {
+            if (buttonsOpen[i]) {
+                if (trueValue < 2) {
+                    btnNumberStore[trueValue] = i;
+                }
+                trueValue++;
+            }
+        }
+        if (trueValue == 2) {
+            for (int i = 0; i < buttonsOpen.length; i++) {
+                if (i != btnNumberStore[0] && i != btnNumberStore[1]) {
+                    // Disable buttons that are not in btnNumberStore
+                    invisibleButton(i);
+                }
+            }
+        } else {
+            for (int i = 0; i < buttonsOpen.length; i++) {
+                visibleButton(i);
+            }
+        }
+    }
+    private void visibleButton(int index) {
+        switch (index) {
+            case 0:
+                btn1.setVisible(true);
+                btn1.setDisable(false);
+                break;
+            case 1:
+                btn2.setVisible(true);
+                btn2.setDisable(false);
+                break;
+            case 2:
+                btn3.setVisible(true);
+                btn3.setDisable(false);
+                break;
+            case 3:
+                btn4.setVisible(true);
+                btn4.setDisable(false);
+                break;
+            case 4:
+                btn5.setVisible(true);
+                btn5.setDisable(false);
+                break;
+            case 5:
+                btn6.setVisible(true);
+                btn6.setDisable(false);
+                break;
+            case 6:
+                btn7.setVisible(true);
+                btn7.setDisable(false);
+                break;
+            case 7:
+                btn8.setVisible(true);
+                btn8.setDisable(false);
+                break;
+            case 8:
+                btn9.setVisible(true);
+                btn9.setDisable(false);
+                break;
+            case 9:
+                btn10.setVisible(true);
+                btn10.setDisable(false);
+                break;
+            case 10:
+                btn11.setVisible(true);
+                btn11.setDisable(false);
+                break;
+            case 11:
+                btn12.setVisible(true);
+                btn12.setDisable(false);
+                break;
+            case 12:
+                btn13.setVisible(true);
+                btn13.setDisable(false);
+                break;
+            case 13:
+                btn14.setVisible(true);
+                btn14.setDisable(false);
+                break;
+            case 14:
+                btn15.setVisible(true);
+                btn15.setDisable(false);
+                break;
+            case 15:
+                btn16.setVisible(true);
+                btn16.setDisable(false);
+                break;
+            case 16:
+                btn17.setVisible(true);
+                btn17.setDisable(false);
+                break;
+            case 17:
+                btn18.setVisible(true);
+                btn18.setDisable(false);
+                break;
+            case 18:
+                btn19.setVisible(true);
+                btn19.setDisable(false);
+                break;
+            case 19:
+                btn20.setVisible(true);
+                btn20.setDisable(false);
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    private void invisibleButton(int index) {
+        switch (index) {
+            case 0:
+                btn1.setVisible(false);
+                btn1.setDisable(true);
+                break;
+            case 1:
+                btn2.setVisible(false);
+                btn2.setDisable(true);
+                break;
+            case 2:
+                btn3.setVisible(false);
+                btn3.setDisable(true);
+                break;
+            case 3:
+                btn4.setVisible(false);
+                btn4.setDisable(true);
+                break;
+            case 4:
+                btn5.setVisible(false);
+                btn5.setDisable(true);
+                break;
+            case 5:
+                btn6.setVisible(false);
+                btn6.setDisable(true);
+                break;
+            case 6:
+                btn7.setVisible(false);
+                btn7.setDisable(true);
+                break;
+            case 7:
+                btn8.setVisible(false);
+                btn8.setDisable(true);
+                break;
+            case 8:
+                btn9.setVisible(false);
+                btn9.setDisable(true);
+                break;
+            case 9:
+                btn10.setVisible(false);
+                btn10.setDisable(true);
+                break;
+            case 10:
+                btn11.setVisible(false);
+                btn11.setDisable(true);
+                break;
+            case 11:
+                btn12.setVisible(false);
+                btn12.setDisable(true);
+                break;
+            case 12:
+                btn13.setVisible(false);
+                btn13.setDisable(true);
+                break;
+            case 13:
+                btn14.setVisible(false);
+                btn14.setDisable(true);
+                break;
+            case 14:
+                btn15.setVisible(false);
+                btn15.setDisable(true);
+                break;
+            case 15:
+                btn16.setVisible(false);
+                btn16.setDisable(true);
+                break;
+            case 16:
+                btn17.setVisible(false);
+                btn17.setDisable(true);
+                break;
+            case 17:
+                btn18.setVisible(false);
+                btn18.setDisable(true);
+                break;
+            case 18:
+                btn19.setVisible(false);
+                btn19.setDisable(true);
+                break;
+            case 19:
+                btn20.setVisible(false);
+                btn20.setDisable(true);
+                break;
+            default:
+                break;
+        }
+    }
+    public void falseAllButton(){
+        for (int i = 0; i < buttonsOpen.length; i++){
+            buttonsOpen[i] = false;
+        }
+        for (boolean b : buttonsOpen) {
+            System.out.println(b);
+        }
     }
     public void restrictions(boolean x){
         borderPane.setDisable(x);
@@ -123,7 +505,7 @@ public class ClassroomGameController {
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             secondsElapsed++;
             updateTimerLabel();
-            if (secondsElapsed == 1000) {
+            if (secondsElapsed == 180) {
                 try {
                     switchToStartMenu();
 
@@ -157,11 +539,25 @@ public class ClassroomGameController {
     }
     public void setButtonsInvisible(){
         menuVbox.setStyle("-fx-background-color: transparent; ");
-        resumeButton.setStyle("-fx-background-color: transparent; " + "-fx-text: \"\"; ");
+        resumeButton.setStyle("-fx-background-color: transparent; "); //Set background to transparent
+        resumeButton.setText(""); // Set text to empty string
+        newGameButton.setStyle("-fx-background-color: transparent; ");
+        newGameButton.setText("");
+        soundsButton.setStyle("-fx-background-color: transparent; ");
+        soundsButton.setText("");
+        exitButton.setStyle("-fx-background-color: transparent; ");
+        exitButton.setText("");
     }
     public void setButtonsVisible(){
         menuVbox.setStyle("-fx-background-color: #c481a7; ");
-        resumeButton.setStyle("-fx-background-color: #ffccd5; " + "-fx-text: \"Resume\"; ");
+        resumeButton.setStyle("-fx-background-color: #ffccd5; ");
+        resumeButton.setText("Resume");
+        newGameButton.setStyle("-fx-background-color: #ffccd5; ");
+        newGameButton.setText("New Game");
+        soundsButton.setStyle("-fx-background-color: #ffccd5; ");
+        soundsButton.setText("Sounds");
+        exitButton.setStyle("-fx-background-color: #ffccd5; ");
+        exitButton.setText("Exit Game");
     }
     public void switchToDifficultySelectionWindow(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("DifficultySelectionWindow.fxml")));
@@ -191,767 +587,285 @@ public class ClassroomGameController {
         // Show the stage
         stage.show();
     }
-    public void showContentBtn1_classroom(){
-        String imageName = btn1ImageName;
-
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg");
-        btn1_classroom = new ImageView(backgroundImage);
-        btn1_classroom.setFitWidth(70);
-        btn1_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn1.setGraphic(btn1_classroom);
-        ClassroomGameController.setBtn1ImageName(imageName);
-        // Remove the ellipsis
-        classroomGame_btn1.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn1.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn1.setGraphic(null); // Remove the image from the button
+    public void btn1ShowImage() throws Exception {
+        Image btn1BackgroundImage = new Image(picturesUrl[0]);
+        if (buttonsOpen[0]){
+            btn1.setGraphic(null);
+            buttonsOpen[0] = !buttonsOpen[0];
         } else {
-            classroomGame_btn1.setText("");
-            classroomGame_btn1.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn1.setGraphic(btn1_classroom); // Set the image background
+            btn1_imageView = new ImageView(btn1BackgroundImage);
+            btn1_imageView.setFitHeight(70);
+            btn1_imageView.setFitWidth(70);
+            btn1.setGraphic(btn1_imageView);
+            buttonsOpen[0] = !buttonsOpen[0];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn1);
+        match_Checker();
     }
-    public static void setBtn1ImageName(String imageName) {
-        btn1ImageName = imageName;
-    }
-    public void showContentBtn2_classroom() {
-        // Set the image name using the previously declared field
-        String imageName = btn2ImageName;
-
-        // Check if imageName is not null before proceeding
-
-        // Add the rest of your logic here
-        // For example:
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg");
-        btn2_classroom = new ImageView(backgroundImage);
-        btn2_classroom.setFitWidth(70);
-        btn2_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn2.setGraphic(btn2_classroom);
-        ClassroomGameController.setBtn2ImageName(imageName);
-        // Remove the ellipsis
-        classroomGame_btn2.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-            classroomGame_btn2.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn2.setGraphic(null); // Remove the image from the button
+    public void btn2ShowImage() throws Exception {
+        Image btn2BackgroundImage = new Image(picturesUrl[1]);
+        if (buttonsOpen[1]){
+            btn2.setGraphic(null);
+            buttonsOpen[1] = !buttonsOpen[1];
         } else {
-            classroomGame_btn2.setText("");
-            classroomGame_btn2.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn2.setGraphic(btn2_classroom); // Set the image background
+            btn2_imageView = new ImageView(btn2BackgroundImage);
+            btn2_imageView.setFitHeight(70);
+            btn2_imageView.setFitWidth(70);
+            btn2.setGraphic(btn2_imageView);
+            buttonsOpen[1] = !buttonsOpen[1];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn2);
-
+        match_Checker();
     }
-    public static void setBtn2ImageName(String imageName) {
-        btn2ImageName = imageName;
-    }
-    public void showContentBtn3_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg");
-        btn3_classroom = new ImageView(backgroundImage);
-        btn3_classroom.setFitWidth(70);
-        btn3_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn3.setGraphic(btn3_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn3.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn3.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn3.setGraphic(null); // Remove the image from the button
+    public void btn3ShowImage() throws Exception {
+        Image btn3BackgroundImage = new Image(picturesUrl[2]);
+        if (buttonsOpen[2]){
+            btn3.setGraphic(null);
+            buttonsOpen[2] = !buttonsOpen[2];
         } else {
-            classroomGame_btn3.setText("");
-            classroomGame_btn3.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn3.setGraphic(btn3_classroom); // Set the image background
+            btn3_imageView = new ImageView(btn3BackgroundImage);
+            btn3_imageView.setFitHeight(70);
+            btn3_imageView.setFitWidth(70);
+            btn3.setGraphic(btn3_imageView);
+            buttonsOpen[2] = !buttonsOpen[2];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn3);
+        match_Checker();
     }
-    public void showContentBtn4_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg");
-        btn4_classroom = new ImageView(backgroundImage);
-        btn4_classroom.setFitWidth(70);
-        btn4_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn4.setGraphic(btn4_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn4.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn4.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn4.setGraphic(null); // Remove the image from the button
+    public void btn4ShowImage() throws Exception {
+        Image btn4BackgroundImage = new Image(picturesUrl[3]);
+        if (buttonsOpen[3]){
+            btn4.setGraphic(null);
+            buttonsOpen[3] = !buttonsOpen[3];
         } else {
-            classroomGame_btn4.setText("");
-            classroomGame_btn4.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn4.setGraphic(btn4_classroom); // Set the image background
+            btn4_imageView = new ImageView(btn4BackgroundImage);
+            btn4_imageView.setFitHeight(70);
+            btn4_imageView.setFitWidth(70);
+            btn4.setGraphic(btn4_imageView);
+            buttonsOpen[3] = !buttonsOpen[3];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn4);
+        match_Checker();
     }
-    public void showContentBtn5_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg");
-        btn5_classroom = new ImageView(backgroundImage);
-        btn5_classroom.setFitWidth(70);
-        btn5_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn5.setGraphic(btn5_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn5.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn5.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn5.setGraphic(null); // Remove the image from the button
+    public void btn5ShowImage() throws Exception {
+        Image btn5BackgroundImage = new Image(picturesUrl[4]);
+        if (buttonsOpen[4]){
+            btn5.setGraphic(null);
+            buttonsOpen[4] = !buttonsOpen[4];
         } else {
-            classroomGame_btn5.setText("");
-            classroomGame_btn5.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn5.setGraphic(btn5_classroom); // Set the image background
+            btn5_imageView = new ImageView(btn5BackgroundImage);
+            btn5_imageView.setFitHeight(70);
+            btn5_imageView.setFitWidth(70);
+            btn5.setGraphic(btn5_imageView);
+            buttonsOpen[4] = !buttonsOpen[4];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn5);
+        match_Checker();
     }
-    public void showContentBtn6_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png");
-        btn6_classroom = new ImageView(backgroundImage);
-        btn6_classroom.setFitWidth(70);
-        btn6_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn6.setGraphic(btn6_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn6.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn6.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn6.setGraphic(null); // Remove the image from the button
+    public void btn6ShowImage() throws Exception {
+        Image btn6BackgroundImage = new Image(picturesUrl[5]);
+        if (buttonsOpen[5]){
+            btn6.setGraphic(null);
+            buttonsOpen[5] = !buttonsOpen[5];
         } else {
-            classroomGame_btn6.setText("");
-            classroomGame_btn6.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn6.setGraphic(btn6_classroom); // Set the image background
+            btn6_imageView = new ImageView(btn6BackgroundImage);
+            btn6_imageView.setFitHeight(70);
+            btn6_imageView.setFitWidth(70);
+            btn6.setGraphic(btn6_imageView);
+            buttonsOpen[5] = !buttonsOpen[5];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn6);
+        match_Checker();
     }
-    public void showContentBtn7_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg");
-        btn7_classroom = new ImageView(backgroundImage);
-        btn7_classroom.setFitWidth(70);
-        btn7_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn7.setGraphic(btn7_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn7.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn7.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn7.setGraphic(null); // Remove the image from the button
+    public void btn7ShowImage() throws Exception {
+        Image btn7BackgroundImage = new Image(picturesUrl[6]);
+        if (buttonsOpen[6]){
+            btn7.setGraphic(null);
+            buttonsOpen[6] = !buttonsOpen[6];
         } else {
-            classroomGame_btn7.setText("");
-            classroomGame_btn7.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn7.setGraphic(btn7_classroom); // Set the image background
+            btn7_imageView = new ImageView(btn7BackgroundImage);
+            btn7_imageView.setFitHeight(70);
+            btn7_imageView.setFitWidth(70);
+            btn7.setGraphic(btn7_imageView);
+            buttonsOpen[6] = !buttonsOpen[6];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn7);
+        match_Checker();
     }
-    public void showContentBtn8_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg");
-        btn8_classroom = new ImageView(backgroundImage);
-        btn8_classroom.setFitWidth(70);
-        btn8_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn8.setGraphic(btn8_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn8.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn8.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn8.setGraphic(null); // Remove the image from the button
+    public void btn8ShowImage() throws Exception {
+        Image btn8BackgroundImage = new Image(picturesUrl[7]);
+        if (buttonsOpen[7]){
+            btn8.setGraphic(null);
+            buttonsOpen[7] = !buttonsOpen[7];
         } else {
-            classroomGame_btn8.setText("");
-            classroomGame_btn8.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn8.setGraphic(btn8_classroom); // Set the image background
+            btn8_imageView = new ImageView(btn8BackgroundImage);
+            btn8_imageView.setFitHeight(70);
+            btn8_imageView.setFitWidth(70);
+            btn8.setGraphic(btn8_imageView);
+            buttonsOpen[7] = !buttonsOpen[7];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn8);
+        match_Checker();
     }
-    public void showContentBtn9_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg");
-        btn9_classroom = new ImageView(backgroundImage);
-        btn9_classroom.setFitWidth(70);
-        btn9_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn9.setGraphic(btn9_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn9.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn9.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn9.setGraphic(null); // Remove the image from the button
+    public void btn9ShowImage() throws Exception {
+        Image btn9BackgroundImage = new Image(picturesUrl[8]);
+        if (buttonsOpen[8]){
+            btn9.setGraphic(null);
+            buttonsOpen[8] = !buttonsOpen[8];
         } else {
-            classroomGame_btn9.setText("");
-            classroomGame_btn9.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn9.setGraphic(btn9_classroom); // Set the image background
+            btn9_imageView = new ImageView(btn9BackgroundImage);
+            btn9_imageView.setFitHeight(70);
+            btn9_imageView.setFitWidth(70);
+            btn9.setGraphic(btn9_imageView);
+            buttonsOpen[8] = !buttonsOpen[8];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn9);
+        match_Checker();
     }
-    public void showContentBtn10_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png");
-        btn10_classroom = new ImageView(backgroundImage);
-        btn10_classroom.setFitWidth(70);
-        btn10_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn10.setGraphic(btn10_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn10.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn10.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn10.setGraphic(null); // Remove the image from the button
+    public void btn10ShowImage() throws Exception {
+        Image btn10BackgroundImage = new Image(picturesUrl[9]);
+        if (buttonsOpen[9]){
+            btn10.setGraphic(null);
+            buttonsOpen[9] = !buttonsOpen[9];
         } else {
-            classroomGame_btn10.setText("");
-            classroomGame_btn10.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn10.setGraphic(btn10_classroom); // Set the image background
+            btn10_imageView = new ImageView(btn10BackgroundImage);
+            btn10_imageView.setFitHeight(70);
+            btn10_imageView.setFitWidth(70);
+            btn10.setGraphic(btn10_imageView);
+            buttonsOpen[9] = !buttonsOpen[9];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn10);
+        match_Checker();
     }
-
-    public void showContentBtn11_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg");
-        btn11_classroom = new ImageView(backgroundImage);
-        btn11_classroom.setFitWidth(70);
-        btn11_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn11.setGraphic(btn11_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn11.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn11.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn11.setGraphic(null); // Remove the image from the button
+    public void btn11ShowImage() throws Exception {
+        Image btn11BackgroundImage = new Image(picturesUrl[10]);
+        if (buttonsOpen[10]){
+            btn11.setGraphic(null);
+            buttonsOpen[10] = !buttonsOpen[10];
         } else {
-            classroomGame_btn11.setText("");
-            classroomGame_btn11.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn11.setGraphic(btn11_classroom); // Set the image background
+            btn11_imageView = new ImageView(btn11BackgroundImage);
+            btn11_imageView.setFitHeight(70);
+            btn11_imageView.setFitWidth(70);
+            btn11.setGraphic(btn11_imageView);
+            buttonsOpen[10] = !buttonsOpen[10];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn11);
+        match_Checker();
     }
-    public void showContentBtn12_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg");
-        btn12_classroom = new ImageView(backgroundImage);
-        btn12_classroom.setFitWidth(70);
-        btn12_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn12.setGraphic(btn12_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn12.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn12.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn12.setGraphic(null); // Remove the image from the button
+    public void btn12ShowImage() throws Exception {
+        Image btn12BackgroundImage = new Image(picturesUrl[11]);
+        if (buttonsOpen[11]){
+            btn12.setGraphic(null);
+            buttonsOpen[11] = !buttonsOpen[11];
         } else {
-            classroomGame_btn12.setText("");
-            classroomGame_btn12.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn12.setGraphic(btn12_classroom); // Set the image background
+            btn12_imageView = new ImageView(btn12BackgroundImage);
+            btn12_imageView.setFitHeight(70);
+            btn12_imageView.setFitWidth(70);
+            btn12.setGraphic(btn12_imageView);
+            buttonsOpen[11] = !buttonsOpen[11];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn12);
+        match_Checker();
     }
-
-    public void showContentBtn13_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg");
-        btn13_classroom = new ImageView(backgroundImage);
-        btn13_classroom.setFitWidth(70);
-        btn13_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn13.setGraphic(btn13_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn13.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn13.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn13.setGraphic(null); // Remove the image from the button
+    public void btn13ShowImage() throws Exception {
+        Image btn13BackgroundImage = new Image(picturesUrl[12]);
+        if (buttonsOpen[12]){
+            btn13.setGraphic(null);
+            buttonsOpen[12] = !buttonsOpen[12];
         } else {
-            classroomGame_btn13.setText("");
-            classroomGame_btn13.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn13.setGraphic(btn13_classroom); // Set the image background
+            btn13_imageView = new ImageView(btn13BackgroundImage);
+            btn13_imageView.setFitHeight(70);
+            btn13_imageView.setFitWidth(70);
+            btn13.setGraphic(btn13_imageView);
+            buttonsOpen[12] = !buttonsOpen[12];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn13);
+        match_Checker();
     }
-
-    public void showContentBtn14_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg");
-        btn14_classroom = new ImageView(backgroundImage);
-        btn14_classroom.setFitWidth(70);
-        btn14_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn14.setGraphic(btn14_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn14.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn14.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn14.setGraphic(null); // Remove the image from the button
+    public void btn14ShowImage() throws Exception {
+        Image btn14BackgroundImage = new Image(picturesUrl[13]);
+        if (buttonsOpen[13]){
+            btn14.setGraphic(null);
+            buttonsOpen[13] = !buttonsOpen[13];
         } else {
-            classroomGame_btn14.setText("");
-            classroomGame_btn14.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn14.setGraphic(btn14_classroom); // Set the image background
+            btn14_imageView = new ImageView(btn14BackgroundImage);
+            btn14_imageView.setFitHeight(70);
+            btn14_imageView.setFitWidth(70);
+            btn14.setGraphic(btn14_imageView);
+            buttonsOpen[13] = !buttonsOpen[13];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn14);
+        match_Checker();
     }
-
-    public void showContentBtn15_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher's Desk.jpg");
-        btn15_classroom = new ImageView(backgroundImage);
-        btn15_classroom.setFitWidth(70);
-        btn15_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn15.setGraphic(btn15_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn15.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn15.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn15.setGraphic(null); // Remove the image from the button
+    public void btn15ShowImage() throws Exception {
+        Image btn15BackgroundImage = new Image(picturesUrl[14]);
+        if (buttonsOpen[14]){
+            btn15.setGraphic(null);
+            buttonsOpen[14] = !buttonsOpen[14];
         } else {
-            classroomGame_btn15.setText("");
-            classroomGame_btn15.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn15.setGraphic(btn15_classroom); // Set the image background
+            btn15_imageView = new ImageView(btn15BackgroundImage);
+            btn15_imageView.setFitHeight(70);
+            btn15_imageView.setFitWidth(70);
+            btn15.setGraphic(btn15_imageView);
+            buttonsOpen[14] = !buttonsOpen[14];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn15);
+        match_Checker();
     }
-
-    public void showContentBtn16_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png");
-        btn16_classroom = new ImageView(backgroundImage);
-        btn16_classroom.setFitWidth(70);
-        btn16_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn16.setGraphic(btn16_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn16.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn16.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn16.setGraphic(null); // Remove the image from the button
+    public void btn16ShowImage() throws Exception {
+        Image btn16BackgroundImage = new Image(picturesUrl[15]);
+        if (buttonsOpen[15]){
+            btn16.setGraphic(null);
+            buttonsOpen[15] = !buttonsOpen[15];
         } else {
-            classroomGame_btn16.setText("");
-            classroomGame_btn16.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn16.setGraphic(btn16_classroom); // Set the image background
+            btn16_imageView = new ImageView(btn16BackgroundImage);
+            btn16_imageView.setFitHeight(70);
+            btn16_imageView.setFitWidth(70);
+            btn16.setGraphic(btn16_imageView);
+            buttonsOpen[15] = !buttonsOpen[15];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn16);
+        match_Checker();
     }
-
-    public void showContentBtn17_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png");
-        btn17_classroom = new ImageView(backgroundImage);
-        btn17_classroom.setFitWidth(70);
-        btn17_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn17.setGraphic(btn17_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn17.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn17.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn17.setGraphic(null); // Remove the image from the button
+    public void btn17ShowImage() throws Exception {
+        Image btn17BackgroundImage = new Image(picturesUrl[16]);
+        if (buttonsOpen[16]){
+            btn17.setGraphic(null);
+            buttonsOpen[16] = !buttonsOpen[16];
         } else {
-            classroomGame_btn17.setText("");
-            classroomGame_btn17.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn17.setGraphic(btn17_classroom); // Set the image background
+            btn17_imageView = new ImageView(btn17BackgroundImage);
+            btn17_imageView.setFitHeight(70);
+            btn17_imageView.setFitWidth(70);
+            btn17.setGraphic(btn17_imageView);
+            buttonsOpen[16] = !buttonsOpen[16];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn17);
+        match_Checker();
     }
-Image backgroundImage18= new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg");
-    public void showContentBtn18_classroom(){
-        btn18_classroom = new ImageView(backgroundImage18);
-        btn18_classroom.setFitWidth(70);
-        btn18_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn18.setGraphic(btn18_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn18.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn18.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn18.setGraphic(null); // Remove the image from the button
+    public void btn18ShowImage() throws Exception {
+        Image btn18BackgroundImage = new Image(picturesUrl[17]);
+        if (buttonsOpen[17]){
+            btn18.setGraphic(null);
+            buttonsOpen[17] = !buttonsOpen[17];
         } else {
-            classroomGame_btn18.setText("");
-            classroomGame_btn18.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn18.setGraphic(btn18_classroom); // Set the image background
+            btn18_imageView = new ImageView(btn18BackgroundImage);
+            btn18_imageView.setFitHeight(70);
+            btn18_imageView.setFitWidth(70);
+            btn18.setGraphic(btn18_imageView);
+            buttonsOpen[17] = !buttonsOpen[17];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn18);
+        match_Checker();
     }
-    Image backgroundImage19 = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.Jpg");
-    public void showContentBtn19_classroom(){
-        btn19_classroom = new ImageView(backgroundImage19);
-        btn19_classroom.setFitWidth(70);
-        btn19_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn19.setGraphic(btn19_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn19.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn19.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn19.setGraphic(null); // Remove the image from the button
+    public void btn19ShowImage() throws Exception {
+        Image btn19BackgroundImage = new Image(picturesUrl[18]);
+        if (buttonsOpen[18]){
+            btn19.setGraphic(null);
+            buttonsOpen[18] = !buttonsOpen[18];
         } else {
-            classroomGame_btn19.setText("");
-            classroomGame_btn19.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn19.setGraphic(btn19_classroom); // Set the image background
+            btn19_imageView = new ImageView(btn19BackgroundImage);
+            btn19_imageView.setFitHeight(70);
+            btn19_imageView.setFitWidth(70);
+            btn19.setGraphic(btn19_imageView);
+            buttonsOpen[18] = !buttonsOpen[18];
+            System.out.println(buttonsOpen[18]);
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn19);
+        match_Checker();
     }
-
-    public void showContentBtn20_classroom(){
-        Image backgroundImage = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg");
-        btn20_classroom = new ImageView(backgroundImage);
-        btn20_classroom.setFitWidth(70);
-        btn20_classroom.setFitHeight(70);
-
-        // Set the button's graphic to be the ImageView
-        classroomGame_btn20.setGraphic(btn20_classroom);
-
-        // Remove the ellipsis
-        classroomGame_btn20.setContentDisplay(ContentDisplay.TOP);
-
-        if (isImageShown) {
-
-            classroomGame_btn20.setStyle("-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 2px;");
-            classroomGame_btn20.setGraphic(null); // Remove the image from the button
+    public void btn20ShowImage() throws Exception {
+        Image btn20BackgroundImage = new Image(picturesUrl[19]);
+        if (buttonsOpen[19]){
+            btn20.setGraphic(null);
+            buttonsOpen[19] = !buttonsOpen[19];
         } else {
-            classroomGame_btn20.setText("");
-            classroomGame_btn20.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-            classroomGame_btn20.setGraphic(btn20_classroom); // Set the image background
+            btn20_imageView = new ImageView(btn20BackgroundImage);
+            btn20_imageView.setFitHeight(70);
+            btn20_imageView.setFitWidth(70);
+            btn20.setGraphic(btn20_imageView);
+            buttonsOpen[19] = !buttonsOpen[19];
         }
-        // Toggle the flag to indicate the button's state
-        isImageShown = !isImageShown;
-        buttonClicked(classroomGame_btn20);
+        match_Checker();
     }
-
-    private String getImageName(Button button) {
-        // Add your logic to retrieve the image name associated with the button
-        // For example, you could use the button's ID or properties to determine the image name
-        if (button.equals(classroomGame_btn1)) {
-            return btn1ImageName;
-        } else if (button.equals(classroomGame_btn2)) {
-            return btn2ImageName;
-        }
-        // Add similar logic for other buttons if needed
-        return null; // Return null if image name is not found
-    }
-
-    private final boolean[][] matchedButtons = new boolean[20][20]; // 2D array to keep track of matched buttons
-
-    public void buttonClicked(Button button) {
-        int buttonIndex = getButtonIndex(button);
-        int row = buttonIndex / 20;
-        int col = buttonIndex % 20;
-
-        // Check if the button has already been matched
-        if (matchedButtons[row][col]) {
-            return; // Do nothing if the button has already been matched
-        }
-
-        // Check if lastClickedButton is not null and not the same as the current button
-        if (lastClickedButton != null && !lastClickedButton.equals(button)) {
-            // If there are already two buttons clicked, do nothing
-            if (thirdButtonClicked) {
-                return;
-            }
-
-            // Show the image for 2 seconds
-            showImageForTwoSeconds(lastClickedButton, button);
-
-            // Reset lastClickedButton
-            lastClickedButton = null;
-        } else if (!thirdButtonClicked) {
-            // If the current button is the same as lastClickedButton, update lastClickedButton
-            lastClickedButton = button;
-
-            // Toggle the flag to indicate the button's state
-            isImageShown = !isImageShown;
-
-            // Remove the gray background color from the button
-            button.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-        }
-
-        // Check if the button has been matched
-        if (matchedButtons[row][col]) {
-            // Disable the button if matched
-            button.setDisable(true);
-            return; // Return if the button has been matched
-        }
-
-        // If there are already two buttons clicked, do nothing
-        if (thirdButtonClicked) {
-            return;
-        }
-
-        // Check if two buttons are clicked and they don't match
-        if (lastClickedButton != null && !lastClickedButton.equals(button)) {
-            String imageName1 = getImageName(lastClickedButton);
-            String imageName2 = getImageName(button);
-
-            if (imageName1 != null && imageName2 != null && !imageName1.equals(imageName2)) {
-                // If the images don't match, show a popup saying "Not matched!"
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Not matched!", ButtonType.OK);
-                alert.showAndWait();
-
-                // Flip back the buttons after a delay
-                PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
-                pause.setOnFinished(event -> {
-                    revertToNormal(lastClickedButton);
-                    revertToNormal(button);
-                });
-                pause.play();
-
-                // Reset lastClickedButton and thirdButtonClicked
-                lastClickedButton = null;
-                thirdButtonClicked = false;
-            } else {
-                // Mark the buttons as matched
-                int index1 = getButtonIndex(lastClickedButton);
-                int index2 = getButtonIndex(button);
-
-                int row1 = index1 / 20;
-                int col1 = index1 % 20;
-                int row2 = index2 / 20;
-                int col2 = index2 % 20;
-
-                matchedButtons[row1][col1] = true;
-                matchedButtons[row2][col2] = true;
-
-                // Disable the buttons
-                lastClickedButton.setDisable(true);
-                button.setDisable(true);
-
-                // Reset lastClickedButton and thirdButtonClicked
-                lastClickedButton = null;
-                thirdButtonClicked = false;
-            }
-        }
-    }
-
-    private void showImageForTwoSeconds(Button button1, Button button2) {
-        String imageName1 = getImageName(button1);
-        String imageName2 = getImageName(button2);
-        if (imageName1 != null && imageName1.equals(imageName2)) {
-            // If the images match, show a popup saying "matched!" and mark the buttons as matched
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Matched!", ButtonType.OK);
-            alert.showAndWait();
-            int index1 = getButtonIndex(button1);
-            int index2 = getButtonIndex(button2);
-            int row1 = index1 / 20;
-            int col1 = index1 % 20;
-            int row2 = index2 / 20;
-            int col2 = index2 % 20;
-            // Mark the matched buttons in the 2D array
-            matchedButtons[row1][col1] = true;
-            matchedButtons[row2][col2] = true;
-        }
-        // Show the image on both buttons
-        showImage(button1);
-        showImage(button2);
-        // Revert the buttons to normal state after a delay
-        PauseTransition pause = new PauseTransition(Duration.seconds(2));
-        pause.setOnFinished(event -> {
-            if (thirdButtonClicked) {
-                // Show the image on the third button
-                showImage(thirdButton);
-                thirdButtonClicked = false;
-                thirdButton = null;
-            }
-
-            // Revert the buttons to normal state, unless they are matched
-            int index1 = getButtonIndex(button1);
-            int index2 = getButtonIndex(button2);
-            int row1 = index1 / 20;
-            int col1 = index1 % 20;
-            int row2 = index2 / 20;
-            int col2 = index2 % 20;
-            if (!matchedButtons[row1][col1]) {
-                revertToNormal(button1);
-            }
-            if (!matchedButtons[row2][col2]) {
-                revertToNormal(button2);
-            }
-        });
-        pause.play();
-    }
-
-    private int getButtonIndex(Button button) {
-        // Implement this method to get the index of the button in the button array
-        // This will be used to access the matchedButtons 2D array
-        for (int i = 0; i < 20; i++) {
-            for (int j = 0; j < 20; j++) {
-                if (button == getButtonAt(i, j)) {
-                    return i * 20 + j;
-                }
-            }
-        }
-        return -1; // Return -1 if the button is not found
-    }
-
-    private Button getButtonAt(int row, int col) {
-        // Implement this method to get the button at the specified row and column
-        // For example, you could use an array or a Map to store the buttons
-        // and retrieve the button based on the row and column indices
-        switch (row * 20 + col) {
-            case 0:
-                return classroomGame_btn1;
-            case 1:
-                return classroomGame_btn2;
-            case 2:
-                return classroomGame_btn3;
-            case 3:
-                return classroomGame_btn4;
-            case 4:
-                return classroomGame_btn5;
-            case 5:
-                return classroomGame_btn6;
-            case 6:
-                return classroomGame_btn7;
-            case 7:
-                return classroomGame_btn8;
-            case 8:
-                return classroomGame_btn9;
-            case 9:
-                return classroomGame_btn10;
-            case 10:
-                return classroomGame_btn11;
-            case 11:
-                return classroomGame_btn12;
-            case 12:
-                return classroomGame_btn13;
-            case 13:
-                return classroomGame_btn14;
-            case 14:
-                return classroomGame_btn15;
-            case 15:
-                return classroomGame_btn16;
-            case 16:
-                return classroomGame_btn17;
-            case 17:
-                return classroomGame_btn18;
-            case 18:
-                return classroomGame_btn19;
-            case 19:
-                return classroomGame_btn20;
-            // Add cases for the remaining buttons
-            default:
-                return null;
-        }
-    }
-
-    private void showImage(Button button) {
-        // Get the image name associated with the button
-        String imageName = getImageName(button);
-        if (imageName != null) {
-            // Load the image
-            Image image = new Image("com/app/mixnmatchproject/images/CategoryPictures/Classroom/" + imageName);
-            ImageView imageView = new ImageView(image);
-            imageView.setFitWidth(70);
-            imageView.setFitHeight(70);
-
-            // Set the button's graphic to the image
-            button.setGraphic(imageView);
-            button.setContentDisplay(ContentDisplay.TOP);
-            button.setText("");
-            button.setStyle("-fx-background-color: transparent; -fx-border-color: transparent;");
-        }
-    }
-
-    private void revertToNormal(Button button) {
-        button.setGraphic(null);
-        button.setText("");
-        button.setStyle("");
-        isImageShown = false;
-    }
-
 }
