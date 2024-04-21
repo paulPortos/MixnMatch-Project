@@ -21,12 +21,12 @@
     -fx-background-image: url('../images/bgmenu.png');
     -fx-background-size: cover;
 }
-    .label-startMenu {
+.label-startMenu {
         -fx-effect: dropshadow(gaussian, rgb(178, 46, 225), 5, 0, 5,5);
         -fx-font-size: 60px;
         -fx-text-fill: white;
 
-    }
+}
 .btn{
     -fx-background-color: rgb(168, 0, 220);
     -fx-font-family:gaussian;
