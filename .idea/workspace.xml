@@ -5,15 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23172a70-53ca-490d-b266-707179b02cb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/music/GameBackgroundMusic.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/music/GameBackgroundMusic.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/DifficultySelection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/Highscore.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/Instruction.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeEasy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeHard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeMedium.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/classroombg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/bgmenu.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyF1MotorSportGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyF1MotorSportGame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasySafariGame.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyUnderTheSeaGame.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/HighScore.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/HighScore.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/InstructionScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/InstructionScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/StartMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/StartMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionHard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionHard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionMedium.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionMedium.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +78,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images\CategoryPictures\Classroom" />
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\music" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\java\com\app\mixnmatchproject" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject" />
-      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\gameDifficulty\medium" />
-      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\gameDifficulty\easy\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.app.mixnmatchproject" />

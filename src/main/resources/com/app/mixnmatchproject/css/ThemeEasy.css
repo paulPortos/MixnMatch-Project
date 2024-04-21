@@ -1,0 +1,45 @@
+.themeeasybg{
+    -fx-background-image: url('../images/bgmenu.png');
+    -fx-background-size: cover;
+}
+.selection-box-button{
+    -fx-background-radius: 10px;
+    -fx-min-width: 205px;
+    -fx-min-height: 90px;
+    -fx-max-width: 320px;
+    -fx-max-height: 320px;
+    -fx-font-family:gaussian;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-background-color: rgba(198, 0, 255, 0.88);
+}
+.selection-box-button:hover{
+    -fx-background-color: rgba(158, 0, 204, 0.88);
+}
+.selection-box-button:pressed{
+    -fx-background-color: rgb(94, 5, 121);
+}
+.play-box-button{
+    -fx-background-radius: 10px;
+    -fx-min-width: 50px;
+    -fx-min-height: 20px;
+    -fx-max-width: 70px;
+    -fx-max-height: 40px;
+    -fx-font-family:gaussian;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-color: rgba(198, 0, 255, 0.88);
+}
+.play-box-button:hover{
+    -fx-background-color: rgba(158, 0, 204, 0.88);
+}
+.background-side-panel {
+    -fx-background-color: rgba(37, 37, 37, 0.5);
+}
+.image_view-selectionScreen {
+    -fx-min-width: 100px;
+    -fx-min-height: 100px;
+    -fx-max-width: 100px;
+    -fx-max-height: 120px;
+    -fx-background-color: #0d0d46;
+}

@@ -6,26 +6,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="752.0" prefWidth="786.0" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.mixnmatchproject.MainController">
+<AnchorPane prefHeight="752.0" prefWidth="786.0" styleClass="bgDifficulty" stylesheets="@css/DifficultySelection.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.mixnmatchproject.MainController">
     <children>
-        <AnchorPane layoutX="111.0" prefHeight="754.0" prefWidth="315.0" styleClass="background-side-panel" stylesheets="@css/main.css">
+        <AnchorPane layoutX="486.0" prefHeight="754.0" prefWidth="249.0" styleClass="bgdifficulty" stylesheets="@css/DifficultySelection.css">
             <children>
-                <VBox layoutY="138.0" prefHeight="342.0" prefWidth="318.0" stylesheets="@css/main.css">
-                    <children>
-                        <Button fx:id="classroomBtn" maxWidth="255.0" mnemonicParsing="false" onAction="#switchToEasySelectionScene" prefHeight="80.0" prefWidth="255.0" styleClass="selection-box-button" stylesheets="@css/main.css" text="Easy" />
-                        <Button mnemonicParsing="false" onAction="#switchToMediumSelectionScene" prefHeight="78.0" prefWidth="324.0" styleClass="selection-box-button" stylesheets="@css/main.css" text="Medium" />
-                        <Button maxWidth="326.0" mnemonicParsing="false" onAction="#switchToHardSelectionScene" prefHeight="71.0" prefWidth="326.0" styleClass="selection-box-button" stylesheets="@css/main.css" text="Hard" />
-                    </children>
-                </VBox>
-            </children>
-        </AnchorPane>
-        <AnchorPane layoutX="429.0" prefHeight="754.0" prefWidth="249.0">
-            <children>
-                <ImageView fx:id="category" fitHeight="162.0" fitWidth="226.0" layoutX="12.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" styleClass="image_view-selectionScreen">
+                <ImageView fx:id="category" fitHeight="162.0" fitWidth="226.0" layoutX="12.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" styleClass="image_view-selectionScreen">
                     <image>
                         <Image url="@images/CategoryPictures/Classroom/Ballpen.jpg" />
                     </image>
                 </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="80.0" prefHeight="778.0" prefWidth="381.0" styleClass="background-side-panel" stylesheets="@css/DifficultySelection.css">
+            <children>
+                <VBox layoutX="32.0" layoutY="168.0" prefHeight="271.0" prefWidth="318.0" stylesheets="@css/main.css">
+                    <children>
+                        <Button fx:id="classroomBtn" alignment="CENTER" maxHeight="179.0" maxWidth="255.0" mnemonicParsing="false" onAction="#switchToEasySelectionScene" prefHeight="151.0" prefWidth="318.0" styleClass="selection-box-button" stylesheets="@css/DifficultySelection.css" text="Easy" textFill="WHITE" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToMediumSelectionScene" prefHeight="78.0" prefWidth="324.0" styleClass="selection-box-button" stylesheets="@css/DifficultySelection.css" text="Medium" textFill="WHITE" />
+                        <Button alignment="CENTER" maxHeight="197.0" maxWidth="326.0" mnemonicParsing="false" onAction="#switchToHardSelectionScene" prefHeight="190.0" prefWidth="318.0" styleClass="selection-box-button" stylesheets="@css/DifficultySelection.css" text="Hard" textFill="WHITE" />
+                    </children>
+                </VBox>
             </children>
         </AnchorPane>
     </children>

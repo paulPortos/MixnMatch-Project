@@ -1,0 +1,26 @@
+.highscorebg {
+    -fx-background-image: url('../images/bgmenu.png');
+    -fx-background-size: cover;
+}
+.label-h1{
+    -fx-font-family:gaussian;
+    -fx-font-size:40px
+}
+.label-h2{
+    -fx-font-family:gaussian;
+    -fx-font-size:25px
+}
+.highscorecontainer{
+    -fx-background-color: rgba(37, 37, 37, 0.5);
+
+}
+.backbtn{
+    -fx-border-radius: 40px;
+    -fx-font-family:gaussian;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-color: rgba(198, 0, 255, 0.88);
+}
+.backbtn:hover{
+    -fx-background-color: rgba(158, 0, 204, 0.88);
+}

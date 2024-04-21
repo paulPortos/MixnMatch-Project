@@ -1,44 +1,49 @@
 .classroomgame-buttons {
-    -fx-background-color: #ffe5ea;
-    -fx-border-color: black;
-    -fx-border-width: 2px;
+    -fx-background-color: #2b7a2b;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
 }
-.classroomgame-buttons: hover {
-    -fx-background-color: #ffccd5;
+.classroomgame-buttons:hover {
+    -fx-background-color: #176918;
     -fx-background-radius: 10px;
 }
-.background{
-    -fx-background-color: #ffc0cb;
+.background {
+    -fx-background-image: url('../../../images/CategoryPictures/Classroom/classroombg.jpg');
+    -fx-background-size: cover;
+    -fx-alignment: center;
+}
+.timer{
+    -fx-fill: white;
 }
 .timer-background{
-    -fx-background-color: #c481a7;
-}
-.button{
-    -fx-background-color: #c481a7;
+    -fx-background-color: #175018;
 }
 .menu-background{
-    -fx-background-color: #cbc1ae ;
-}
-.transparent-background {
-    -fx-background-color: transparent;
+    -fx-background-color: #175018;
 }
 .bottom-navigation-button {
-    -fx-background-color: #cbc1ae ;
+    -fx-background-color: #175018;
+    -fx-text-fill: white;
+}
+.bottom-navigation-button:hover{
+    -fx-background-color: #28722f; /* Grey color */
 }
 .start-button {
-    -fx-background-color: #808080; /* Grey color */
-    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 0, 0); /* Shadow effect */
+    -fx-background-color: #275428; /* Grey color */
     -fx-background-radius: 5; /* Rounded corners */
     -fx-padding: 10; /* Add padding for better visibility */
     -fx-text-fill: white; /* Text color */
 }
 /* Style on hover */
 .start-button:hover {
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 0); /* Dark shadow effect on hover */
+    -fx-background-color: #17561a; /* Grey color */
     -fx-opacity: 1; /* Restore full opacity on hover */
 }
 .start-button:pressed {
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 0); /* Dark shadow effect when pressed */
+    -fx-background-color: #005402; /* Grey color */
     -fx-transition: opacity 1.5s; /* Apply transition effect to opacity over 1.5 seconds */
     -fx-opacity: 0; /* Set initial opacity to 0 */
 }
+.transparent-background {
+     -fx-background-color: transparent;
+ }

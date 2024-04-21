@@ -155,138 +155,159 @@ public class ClassroomGameController {
         }
 
         System.out.println(randomNumber);
-        x = randomNumber;
+        rndNumber = randomNumber;
     }
-    int x;
-    int y = 0;
+    int rndNumber;
+    int totalMatched = 0;
+    boolean [] matched = new boolean[10];
     public void match_Checker() throws Exception {
-        if (x == 0){
+        if (rndNumber == 0){
             if(buttonsOpen[0] && buttonsOpen[6]){
                 btn1.setDisable(true);
                 btn7.setDisable(true);
                 buttonsOpen[0] = !buttonsOpen[0];
                 buttonsOpen[6] = !buttonsOpen[6];
-                y++;
+                totalMatched++;
+                matched[0] = true;
             } else if (buttonsOpen[1] && buttonsOpen[10]){
                 btn2.setDisable(true);
                 btn11.setDisable(true);
                 buttonsOpen[1] = !buttonsOpen[1];
                 buttonsOpen[10] = !buttonsOpen[10];
-                y++;
+                totalMatched++;
+                matched[1] = true;
             } else if (buttonsOpen[2] && buttonsOpen[4]){
                 btn3.setDisable(true);
                 btn5.setDisable(true);
                 buttonsOpen[2] = !buttonsOpen[2];
                 buttonsOpen[4] = !buttonsOpen[4];
-                y++;
+                totalMatched++;
+                matched[2] = true;
             } else if (buttonsOpen[3] && buttonsOpen[16]){
                 btn4.setDisable(true);
                 btn17.setDisable(true);
                 buttonsOpen[3] = !buttonsOpen[3];
                 buttonsOpen[16] = !buttonsOpen[16];
-                y++;
+                totalMatched++;
+                matched[3] = true;
             } else if (buttonsOpen[5] && buttonsOpen[8]){
                 btn6.setDisable(true);
                 btn9.setDisable(true);
                 buttonsOpen[5] = !buttonsOpen[5];
                 buttonsOpen[8] = !buttonsOpen[8];
-                y++;
+                totalMatched++;
+                matched[4] = true;
             } else if (buttonsOpen[7] && buttonsOpen[9]){
                 btn8.setDisable(true);
                 btn10.setDisable(true);
                 buttonsOpen[7] = !buttonsOpen[7];
                 buttonsOpen[9] = !buttonsOpen[9];
-                y++;
+                totalMatched++;
+                matched[5] = true;
             }else if (buttonsOpen[11] && buttonsOpen[13]){
                 btn12.setDisable(true);
                 btn14.setDisable(true);
                 buttonsOpen[11] = !buttonsOpen[11];
                 buttonsOpen[13] = !buttonsOpen[13];
-                y++;
+                totalMatched++;
+                matched[6] = true;
             } else if (buttonsOpen[12] && buttonsOpen[14]){
                 btn13.setDisable(true);
                 btn15.setDisable(true);
                 buttonsOpen[12] = !buttonsOpen[12];
                 buttonsOpen[14] = !buttonsOpen[14];
-                y++;
+                totalMatched++;
+                matched[7] = true;
             }  else if (buttonsOpen[15] && buttonsOpen[18]){
                 btn16.setDisable(true);
                 btn19.setDisable(true);
                 buttonsOpen[15] = !buttonsOpen[15];
                 buttonsOpen[18] = !buttonsOpen[18];
-                y++;
+                totalMatched++;
+                matched[8] = true;
             } else if (buttonsOpen[17] && buttonsOpen[19]){
                 btn18.setDisable(true);
                 btn20.setDisable(true);
                 buttonsOpen[17] = !buttonsOpen[17];
                 buttonsOpen[19] = !buttonsOpen[19];
-                y++;
+                totalMatched++;
+                matched[9] = true;
             }
-        } else{
+        } else {
             if(buttonsOpen[0] && buttonsOpen[18]){
                 btn1.setDisable(true);
                 btn19.setDisable(true);
                 buttonsOpen[0] = !buttonsOpen[0];
                 buttonsOpen[18] = !buttonsOpen[18];
-                y++;
+                totalMatched++;
+                matched[0] = true;
             } else if (buttonsOpen[1] && buttonsOpen[12]){
                 btn2.setDisable(true);
                 btn13.setDisable(true);
                 buttonsOpen[1] = !buttonsOpen[1];
                 buttonsOpen[12] = !buttonsOpen[12];
-                y++;
+                totalMatched++;
+                matched[1] = true;
             } else if (buttonsOpen[2] && buttonsOpen[4]){
                 btn3.setDisable(true);
                 btn5.setDisable(true);
                 buttonsOpen[2] = !buttonsOpen[2];
                 buttonsOpen[4] = !buttonsOpen[4];
-                y++;
+                totalMatched++;
+                matched[2] = true;
             } else if (buttonsOpen[3] && buttonsOpen[5]){
                 btn4.setDisable(true);
                 btn6.setDisable(true);
                 buttonsOpen[3] = !buttonsOpen[3];
                 buttonsOpen[5] = !buttonsOpen[5];
-                y++;
+                totalMatched++;
+                matched[3] = true;
             } else if (buttonsOpen[6] && buttonsOpen[9]){
                 btn7.setDisable(true);
                 btn10.setDisable(true);
                 buttonsOpen[6] = !buttonsOpen[6];
                 buttonsOpen[9] = !buttonsOpen[9];
-                y++;
+                totalMatched++;
+                matched[4] = true;
             } else if (buttonsOpen[7] && buttonsOpen[14]){
                 btn8.setDisable(true);
                 btn15.setDisable(true);
                 buttonsOpen[7] = !buttonsOpen[7];
                 buttonsOpen[14] = !buttonsOpen[14];
-                y++;
-            }else if (buttonsOpen[8] && buttonsOpen[10]){
+                totalMatched++;
+                matched[5] = true;
+            } else if (buttonsOpen[8] && buttonsOpen[10]){
                 btn9.setDisable(true);
                 btn11.setDisable(true);
                 buttonsOpen[8] = !buttonsOpen[8];
                 buttonsOpen[10] = !buttonsOpen[10];
-                y++;
+                totalMatched++;
+                matched[6] = true;
             } else if (buttonsOpen[11] && buttonsOpen[17]){
                 btn12.setDisable(true);
                 btn18.setDisable(true);
                 buttonsOpen[11] = !buttonsOpen[11];
                 buttonsOpen[17] = !buttonsOpen[17];
-                y++;
+                totalMatched++;
+                matched[7] = true;
             }  else if (buttonsOpen[16] && buttonsOpen[19]){
                 btn17.setDisable(true);
                 btn20.setDisable(true);
                 buttonsOpen[16] = !buttonsOpen[16];
                 buttonsOpen[19] = !buttonsOpen[19];
-                y++;
+                totalMatched++;
+                matched[8] = true;
             } else if (buttonsOpen[13] && buttonsOpen[15]){
                 btn14.setDisable(true);
                 btn16.setDisable(true);
                 buttonsOpen[13] = !buttonsOpen[13];
                 buttonsOpen[15] = !buttonsOpen[15];
-                y++;
+                totalMatched++;
+                matched[9] = true;
             }
         }
         openTwoButtonsOnly();
-        if (y==10){
+        if (totalMatched==10){
             switchToStartMenu();
         }
     }
@@ -318,20 +339,48 @@ public class ClassroomGameController {
     private void visibleButton(int index) {
         switch (index) {
             case 0:
-                btn1.setVisible(true);
-                btn1.setDisable(false);
+                if (rndNumber == 0 && !matched[0]){
+                    btn1.setVisible(true);
+                    btn1.setDisable(false);
+                } else if (rndNumber ==1 && !matched[0]){
+                    btn1.setVisible(true);
+                    btn1.setDisable(false);
+                } else {
+                    btn1.setDisable(true);
+                }
                 break;
             case 1:
-                btn2.setVisible(true);
-                btn2.setDisable(false);
+                if (rndNumber == 0 && !matched[1]){
+                    btn2.setVisible(true);
+                    btn2.setDisable(false);
+                } else if (rndNumber ==1 && !matched[1]){
+                    btn2.setVisible(true);
+                    btn2.setDisable(false);
+                } else {
+                    btn2.setDisable(true);
+                }
                 break;
             case 2:
-                btn3.setVisible(true);
-                btn3.setDisable(false);
+                if (rndNumber == 0 && !matched[2]){
+                    btn3.setVisible(true);
+                    btn3.setDisable(false);
+                } else if (rndNumber ==1 && !matched[2]){
+                    btn3.setVisible(true);
+                    btn3.setDisable(false);
+                } else {
+                    btn3.setDisable(true);
+                }
                 break;
             case 3:
-                btn4.setVisible(true);
-                btn4.setDisable(false);
+                if (rndNumber == 0 && !matched[2]){
+                    btn4.setVisible(true);
+                    btn4.setDisable(false);
+                } else if (rndNumber ==1 && !matched[2]){
+                    btn4.setVisible(true);
+                    btn4.setDisable(false);
+                } else {
+                    btn4.setDisable(true);
+                }
                 break;
             case 4:
                 btn5.setVisible(true);
@@ -549,14 +598,14 @@ public class ClassroomGameController {
         exitButton.setText("");
     }
     public void setButtonsVisible(){
-        menuVbox.setStyle("-fx-background-color: #c481a7; ");
-        resumeButton.setStyle("-fx-background-color: #ffccd5; ");
+        menuVbox.setStyle("-fx-background-color: rgba(23,80,24,0.9);");
+        resumeButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian'; -fx-font-weight: bold; -fx-border-radius: 10px;");
         resumeButton.setText("Resume");
-        newGameButton.setStyle("-fx-background-color: #ffccd5; ");
+        newGameButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px;");
         newGameButton.setText("New Game");
-        soundsButton.setStyle("-fx-background-color: #ffccd5; ");
+        soundsButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px;");
         soundsButton.setText("Sounds");
-        exitButton.setStyle("-fx-background-color: #ffccd5; ");
+        exitButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px; ");
         exitButton.setText("Exit Game");
     }
     public void switchToDifficultySelectionWindow(ActionEvent e) throws IOException {
