@@ -81,6 +81,7 @@ public class ClassroomGameController {
     @FXML
     private Label timerLabel;
     private Timeline timeline;
+    public String scoreTime;
     private int secondsElapsed = 0;
     public boolean menuClicked = false;
     boolean [] buttonsOpen = new boolean[20];
@@ -163,151 +164,113 @@ public class ClassroomGameController {
     public void match_Checker() throws Exception {
         if (rndNumber == 0){
             if(buttonsOpen[0] && buttonsOpen[6]){
-                btn1.setDisable(true);
-                btn7.setDisable(true);
-                buttonsOpen[0] = !buttonsOpen[0];
-                buttonsOpen[6] = !buttonsOpen[6];
+                buttonsOpen[0] = false;
+                buttonsOpen[6] = false;
                 totalMatched++;
                 matched[0] = true;
             } else if (buttonsOpen[1] && buttonsOpen[10]){
-                btn2.setDisable(true);
-                btn11.setDisable(true);
-                buttonsOpen[1] = !buttonsOpen[1];
-                buttonsOpen[10] = !buttonsOpen[10];
+                buttonsOpen[1] = false;
+                buttonsOpen[10] = false;
                 totalMatched++;
                 matched[1] = true;
             } else if (buttonsOpen[2] && buttonsOpen[4]){
-                btn3.setDisable(true);
-                btn5.setDisable(true);
-                buttonsOpen[2] = !buttonsOpen[2];
-                buttonsOpen[4] = !buttonsOpen[4];
+                buttonsOpen[2] = false;
+                buttonsOpen[4] = false;
                 totalMatched++;
                 matched[2] = true;
             } else if (buttonsOpen[3] && buttonsOpen[16]){
-                btn4.setDisable(true);
-                btn17.setDisable(true);
-                buttonsOpen[3] = !buttonsOpen[3];
-                buttonsOpen[16] = !buttonsOpen[16];
+                buttonsOpen[3] = false;
+                buttonsOpen[16] = false;
                 totalMatched++;
                 matched[3] = true;
             } else if (buttonsOpen[5] && buttonsOpen[8]){
-                btn6.setDisable(true);
-                btn9.setDisable(true);
-                buttonsOpen[5] = !buttonsOpen[5];
-                buttonsOpen[8] = !buttonsOpen[8];
+                buttonsOpen[5] = false;
+                buttonsOpen[8] = false;
                 totalMatched++;
                 matched[4] = true;
             } else if (buttonsOpen[7] && buttonsOpen[9]){
-                btn8.setDisable(true);
-                btn10.setDisable(true);
-                buttonsOpen[7] = !buttonsOpen[7];
-                buttonsOpen[9] = !buttonsOpen[9];
+                buttonsOpen[7] = false;
+                buttonsOpen[9] = false;
                 totalMatched++;
                 matched[5] = true;
             }else if (buttonsOpen[11] && buttonsOpen[13]){
-                btn12.setDisable(true);
-                btn14.setDisable(true);
-                buttonsOpen[11] = !buttonsOpen[11];
-                buttonsOpen[13] = !buttonsOpen[13];
+                buttonsOpen[11] = false;
+                buttonsOpen[13] = false;
                 totalMatched++;
                 matched[6] = true;
             } else if (buttonsOpen[12] && buttonsOpen[14]){
-                btn13.setDisable(true);
-                btn15.setDisable(true);
-                buttonsOpen[12] = !buttonsOpen[12];
-                buttonsOpen[14] = !buttonsOpen[14];
+                buttonsOpen[12] = false;
+                buttonsOpen[14] = false;
                 totalMatched++;
                 matched[7] = true;
             }  else if (buttonsOpen[15] && buttonsOpen[18]){
-                btn16.setDisable(true);
-                btn19.setDisable(true);
-                buttonsOpen[15] = !buttonsOpen[15];
-                buttonsOpen[18] = !buttonsOpen[18];
+                buttonsOpen[15] = false;
+                buttonsOpen[18] = false;
                 totalMatched++;
                 matched[8] = true;
             } else if (buttonsOpen[17] && buttonsOpen[19]){
-                btn18.setDisable(true);
-                btn20.setDisable(true);
-                buttonsOpen[17] = !buttonsOpen[17];
-                buttonsOpen[19] = !buttonsOpen[19];
+                buttonsOpen[17] = false;
+                buttonsOpen[19] = false;
                 totalMatched++;
                 matched[9] = true;
             }
         } else {
             if(buttonsOpen[0] && buttonsOpen[18]){
-                btn1.setDisable(true);
-                btn19.setDisable(true);
-                buttonsOpen[0] = !buttonsOpen[0];
-                buttonsOpen[18] = !buttonsOpen[18];
+                buttonsOpen[0] = false;
+                buttonsOpen[18] = false;
                 totalMatched++;
                 matched[0] = true;
             } else if (buttonsOpen[1] && buttonsOpen[12]){
-                btn2.setDisable(true);
-                btn13.setDisable(true);
-                buttonsOpen[1] = !buttonsOpen[1];
-                buttonsOpen[12] = !buttonsOpen[12];
+                buttonsOpen[1] = false;
+                buttonsOpen[12] = false;
                 totalMatched++;
                 matched[1] = true;
             } else if (buttonsOpen[2] && buttonsOpen[4]){
-                btn3.setDisable(true);
-                btn5.setDisable(true);
-                buttonsOpen[2] = !buttonsOpen[2];
-                buttonsOpen[4] = !buttonsOpen[4];
+                buttonsOpen[2] = false;
+                buttonsOpen[4] = false;
                 totalMatched++;
                 matched[2] = true;
             } else if (buttonsOpen[3] && buttonsOpen[5]){
-                btn4.setDisable(true);
-                btn6.setDisable(true);
-                buttonsOpen[3] = !buttonsOpen[3];
-                buttonsOpen[5] = !buttonsOpen[5];
+                buttonsOpen[3] = false;
+                buttonsOpen[5] = false;
                 totalMatched++;
                 matched[3] = true;
             } else if (buttonsOpen[6] && buttonsOpen[9]){
-                btn7.setDisable(true);
-                btn10.setDisable(true);
-                buttonsOpen[6] = !buttonsOpen[6];
-                buttonsOpen[9] = !buttonsOpen[9];
+                buttonsOpen[6] = false;
+                buttonsOpen[9] = false;
                 totalMatched++;
                 matched[4] = true;
             } else if (buttonsOpen[7] && buttonsOpen[14]){
-                btn8.setDisable(true);
-                btn15.setDisable(true);
-                buttonsOpen[7] = !buttonsOpen[7];
-                buttonsOpen[14] = !buttonsOpen[14];
+                buttonsOpen[7] = false;
+                buttonsOpen[14] = false;
                 totalMatched++;
                 matched[5] = true;
             } else if (buttonsOpen[8] && buttonsOpen[10]){
-                btn9.setDisable(true);
-                btn11.setDisable(true);
-                buttonsOpen[8] = !buttonsOpen[8];
-                buttonsOpen[10] = !buttonsOpen[10];
+                buttonsOpen[8] = false;
+                buttonsOpen[10] = false;
                 totalMatched++;
                 matched[6] = true;
             } else if (buttonsOpen[11] && buttonsOpen[17]){
-                btn12.setDisable(true);
-                btn18.setDisable(true);
-                buttonsOpen[11] = !buttonsOpen[11];
-                buttonsOpen[17] = !buttonsOpen[17];
+                buttonsOpen[11] = false;
+                buttonsOpen[17] = false;
                 totalMatched++;
                 matched[7] = true;
             }  else if (buttonsOpen[16] && buttonsOpen[19]){
-                btn17.setDisable(true);
-                btn20.setDisable(true);
-                buttonsOpen[16] = !buttonsOpen[16];
-                buttonsOpen[19] = !buttonsOpen[19];
+                buttonsOpen[16] = false;
+                buttonsOpen[19] = false;
                 totalMatched++;
                 matched[8] = true;
             } else if (buttonsOpen[13] && buttonsOpen[15]){
-                btn14.setDisable(true);
-                btn16.setDisable(true);
-                buttonsOpen[13] = !buttonsOpen[13];
-                buttonsOpen[15] = !buttonsOpen[15];
+                buttonsOpen[13] = false;
+                buttonsOpen[15] = false;
                 totalMatched++;
                 matched[9] = true;
             }
         }
         openTwoButtonsOnly();
         if (totalMatched==10){
+            scoreTime = String.valueOf(secondsElapsed);
+            System.out.println(scoreTime);
             switchToStartMenu();
         }
     }
@@ -346,6 +309,7 @@ public class ClassroomGameController {
                     btn1.setVisible(true);
                     btn1.setDisable(false);
                 } else {
+                    btn1.setVisible(true);
                     btn1.setDisable(true);
                 }
                 break;
@@ -357,6 +321,7 @@ public class ClassroomGameController {
                     btn2.setVisible(true);
                     btn2.setDisable(false);
                 } else {
+                    btn2.setVisible(true);
                     btn2.setDisable(true);
                 }
                 break;
@@ -368,83 +333,213 @@ public class ClassroomGameController {
                     btn3.setVisible(true);
                     btn3.setDisable(false);
                 } else {
+                    btn3.setVisible(true);
                     btn3.setDisable(true);
                 }
                 break;
             case 3:
-                if (rndNumber == 0 && !matched[2]){
+                if (rndNumber == 0 && !matched[3]){
                     btn4.setVisible(true);
                     btn4.setDisable(false);
-                } else if (rndNumber ==1 && !matched[2]){
+                } else if (rndNumber ==1 && !matched[3]){
                     btn4.setVisible(true);
                     btn4.setDisable(false);
                 } else {
+                    btn4.setVisible(true);
                     btn4.setDisable(true);
                 }
                 break;
             case 4:
-                btn5.setVisible(true);
-                btn5.setDisable(false);
-                break;
+                if (rndNumber == 0 && !matched[2]){
+                    btn5.setVisible(true);
+                    btn5.setDisable(false);
+                } else if (rndNumber ==1 && !matched[2]){
+                    btn5.setVisible(true);
+                    btn5.setDisable(false);
+                } else {
+                    btn5.setVisible(true);
+                    btn5.setDisable(true);
+                }
             case 5:
-                btn6.setVisible(true);
-                btn6.setDisable(false);
-                break;
+                if (rndNumber == 0 && !matched[4]){
+                    btn6.setVisible(true);
+                    btn6.setDisable(false);
+                } else if (rndNumber ==1 && !matched[3]){
+                    btn6.setVisible(true);
+                    btn6.setDisable(false);
+                } else {
+                    btn6.setVisible(true);
+                    btn6.setDisable(true);
+                }
             case 6:
-                btn7.setVisible(true);
-                btn7.setDisable(false);
+                if (rndNumber == 0 && !matched[0]){
+                    btn7.setVisible(true);
+                    btn7.setDisable(false);
+                } else if (rndNumber == 1 && !matched[4]){
+                    btn7.setVisible(true);
+                    btn7.setDisable(false);
+                } else {
+                    btn7.setVisible(true);
+                    btn7.setDisable(true);
+                }
                 break;
             case 7:
-                btn8.setVisible(true);
-                btn8.setDisable(false);
+                if (rndNumber == 0 && !matched[5]){
+                    btn8.setVisible(true);
+                    btn8.setDisable(false);
+                } else if (rndNumber == 1 && !matched[5]){
+                    btn8.setVisible(true);
+                    btn8.setDisable(false);
+                } else {
+                    btn8.setVisible(true);
+                    btn8.setDisable(true);
+                }
                 break;
             case 8:
-                btn9.setVisible(true);
-                btn9.setDisable(false);
+                if (rndNumber == 0 && !matched[4]){
+                    btn9.setVisible(true);
+                    btn9.setDisable(false);
+                } else if (rndNumber == 1 && !matched[6]){
+                    btn9.setVisible(true);
+                    btn9.setDisable(false);
+                } else {
+                    btn9.setVisible(true);
+                    btn9.setDisable(true);
+                }
                 break;
             case 9:
-                btn10.setVisible(true);
-                btn10.setDisable(false);
+                if (rndNumber == 0 && !matched[5]){
+                    btn10.setVisible(true);
+                    btn10.setDisable(false);
+                } else if (rndNumber == 1 && !matched[4]){
+                    btn10.setVisible(true);
+                    btn10.setDisable(false);
+                } else {
+                    btn10.setVisible(true);
+                    btn10.setDisable(true);
+                }
                 break;
             case 10:
-                btn11.setVisible(true);
-                btn11.setDisable(false);
+                if (rndNumber == 0 && !matched[1]){
+                    btn11.setVisible(true);
+                    btn11.setDisable(false);
+                } else if (rndNumber == 1 && !matched[6]){
+                    btn11.setVisible(true);
+                    btn11.setDisable(false);
+                } else {
+                    btn11.setVisible(true);
+                    btn11.setDisable(true);
+                }
                 break;
             case 11:
-                btn12.setVisible(true);
-                btn12.setDisable(false);
+                if (rndNumber == 0 && !matched[6]){
+                    btn12.setVisible(true);
+                    btn12.setDisable(false);
+                } else if (rndNumber == 1 && !matched[7]){
+                    btn12.setVisible(true);
+                    btn12.setDisable(false);
+                } else {
+                    btn12.setVisible(true);
+                    btn12.setDisable(true);
+                }
                 break;
             case 12:
-                btn13.setVisible(true);
-                btn13.setDisable(false);
+                if (rndNumber == 0 && !matched[7]){
+                    btn13.setVisible(true);
+                    btn13.setDisable(false);
+                } else if (rndNumber == 1 && !matched[1]){
+                    btn13.setVisible(true);
+                    btn13.setDisable(false);
+                } else {
+                    btn13.setVisible(true);
+                    btn13.setDisable(true);
+                }
                 break;
             case 13:
-                btn14.setVisible(true);
-                btn14.setDisable(false);
+                if (rndNumber == 0 && !matched[6]){
+                    btn14.setVisible(true);
+                    btn14.setDisable(false);
+                } else if (rndNumber == 1 && !matched[9]){
+                    btn14.setVisible(true);
+                    btn14.setDisable(false);
+                } else {
+                    btn14.setVisible(true);
+                    btn14.setDisable(true);
+                }
                 break;
             case 14:
-                btn15.setVisible(true);
-                btn15.setDisable(false);
+                if (rndNumber == 0 && !matched[7]){
+                    btn15.setVisible(true);
+                    btn15.setDisable(false);
+                } else if (rndNumber == 1 && !matched[5]){
+                    btn15.setVisible(true);
+                    btn15.setDisable(false);
+                } else {
+                    btn15.setVisible(true);
+                    btn15.setDisable(true);
+                }
+
                 break;
             case 15:
-                btn16.setVisible(true);
-                btn16.setDisable(false);
+                if (rndNumber == 0 && !matched[8]){
+                    btn16.setVisible(true);
+                    btn16.setDisable(false);
+                } else if (rndNumber == 1 && !matched[9]){
+                    btn16.setVisible(true);
+                    btn16.setDisable(false);
+                } else {
+                    btn16.setVisible(true);
+                    btn16.setDisable(true);
+                }
+
                 break;
             case 16:
-                btn17.setVisible(true);
-                btn17.setDisable(false);
+                if (rndNumber == 0 && !matched[3]){
+                    btn17.setVisible(true);
+                    btn17.setDisable(false);
+                } else if (rndNumber == 1 && !matched[8]){
+                    btn17.setVisible(true);
+                    btn17.setDisable(false);
+                } else {
+                    btn17.setVisible(true);
+                    btn17.setDisable(true);
+                }
                 break;
             case 17:
-                btn18.setVisible(true);
-                btn18.setDisable(false);
+                if (rndNumber == 0 && !matched[9]){
+                    btn18.setVisible(true);
+                    btn18.setDisable(false);
+                } else if (rndNumber == 1 && !matched[7]){
+                    btn18.setVisible(true);
+                    btn18.setDisable(false);
+                } else {
+                    btn18.setVisible(true);
+                    btn18.setDisable(true);
+                }
                 break;
             case 18:
-                btn19.setVisible(true);
-                btn19.setDisable(false);
+                if (rndNumber == 0 && !matched[8]){
+                    btn19.setVisible(true);
+                    btn19.setDisable(false);
+                } else if (rndNumber == 1 && !matched[0]){
+                    btn19.setVisible(true);
+                    btn19.setDisable(false);
+                } else {
+                    btn19.setVisible(true);
+                    btn19.setDisable(true);
+                }
                 break;
             case 19:
-                btn20.setVisible(true);
-                btn20.setDisable(false);
+                if (rndNumber == 0 && !matched[9]){
+                    btn20.setVisible(true);
+                    btn20.setDisable(false);
+                } else if (rndNumber == 1 && !matched[8]){
+                    btn20.setVisible(true);
+                    btn20.setDisable(false);
+                } else {
+                    btn20.setVisible(true);
+                    btn20.setDisable(true);
+                }
                 break;
             default:
                 break;
@@ -555,6 +650,7 @@ public class ClassroomGameController {
             secondsElapsed++;
             updateTimerLabel();
             if (secondsElapsed == 180) {
+
                 try {
                     switchToStartMenu();
 
@@ -616,13 +712,18 @@ public class ClassroomGameController {
         stage.show();
     }
     public void goBackToMenu(ActionEvent e) throws IOException {
+
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartMenu.fxml")));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+    public String getVariable() {
+        return scoreTime;
+    }
     private void switchToStartMenu() throws Exception {
+
         // Stop the timeline
         timeline.stop();
         // Load StartMenu.fxml
