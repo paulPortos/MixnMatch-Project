@@ -17,7 +17,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Objects;
 import java.util.Random;
 
@@ -30,7 +33,6 @@ public class F1MotorSportGameController {
     public VBox menuVbox;
     public Button resumeButton;
     public Button newGameButton;
-    public Button soundsButton;
     public Button exitButton;
     public Button btn1;
     public Button btn2;
@@ -72,6 +74,9 @@ public class F1MotorSportGameController {
     public ImageView btn18_imageView;
     public ImageView btn19_imageView;
     public ImageView btn20_imageView;
+    public Label endNotifLabel;
+    public Button endNotifBtn;
+    public Pane endNotifPanel;
 
     @FXML
     private Stage stage;
@@ -81,55 +86,59 @@ public class F1MotorSportGameController {
     private Label timerLabel;
     private Timeline timeline;
     public String scoreTime;
-    private int secondsElapsed = 0;
+    public int secondsElapsed = 0;
     public boolean menuClicked = false;
     boolean [] buttonsOpen = new boolean[20];
     String [] picturesUrl = new String[20];
     String [] url0 = {
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alfa romeo.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alpha tauri.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alphine.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/aston martin.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alphine.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/ferrari.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/aston martin.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alfa romeo.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/haas f1.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/ferrari.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/haas f1.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alpha tauri.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/kick sauber.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/haas f1.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mclaren.jpg",
             "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/kick sauber.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alphine.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
-            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/ferrari.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mclaren.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mercedez.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/aston martin.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/red bull racing honda.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mercedez.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/red bull racing honda.jpg",
     };
     String [] url1 = {
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg",
-            "com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/haas f1.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alpha tauri.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/kick sauber.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mclaren.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/kick sauber.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mclaren.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mercedez.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/aston martin.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/red bull racing honda.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mercedez.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/red bull racing honda.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alfa romeo.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alpha tauri.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alphine.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/aston martin.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alphine.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/ferrari.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alfa romeo.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/haas f1.jpg",
+            "com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/ferrari.jpg",
 
     };
+
+    public void initialize(){
+        hideEndNotif();
+    }
     @FXML
     public void pressStart(){
         restrictions(true);
@@ -139,6 +148,47 @@ public class F1MotorSportGameController {
         falseAllButton();
         getUrlNumber();
     }
+    public void hideEndNotif(){
+        endNotifBtn.setDisable(true);
+        endNotifBtn.setVisible(false);
+        endNotifPanel.setDisable(true);
+        endNotifPanel.setVisible(false);
+        endNotifLabel.setVisible(false);
+        endNotifLabel.setDisable(true);
+    }
+    public void showEndNotif(){
+
+        endNotifBtn.setDisable(false);
+        endNotifBtn.setVisible(true);
+        endNotifPanel.setDisable(false);
+        endNotifPanel.setVisible(true);
+        endNotifLabel.setVisible(true);
+        endNotifLabel.setDisable(false);
+        timeline.stop();
+
+
+        if (totalMatched == 10){
+            if (secondsElapsed >=90) {
+                double totalscore = ((secondsElapsed - 90) * 1.1111111111 - 100) ;
+                int scoretotal= (int) Math.abs(totalscore);
+                endNotifLabel.setText("Score: " + scoretotal);
+            }
+            else{
+                endNotifLabel.setText("Score: 100");
+            }
+        }
+
+        else {
+            endNotifLabel.setText("Time's Up!");
+        }
+
+
+    }
+
+
+
+
+
     public void getUrlNumber(){
         Random random = new Random();
 
@@ -153,8 +203,6 @@ public class F1MotorSportGameController {
                 picturesUrl[i] = url1[i];
             }
         }
-
-        System.out.println(randomNumber);
         rndNumber = randomNumber;
     }
     int rndNumber;
@@ -268,12 +316,9 @@ public class F1MotorSportGameController {
         }
         openTwoButtonsOnly();
         if (totalMatched==10){
-            scoreTime = String.valueOf(secondsElapsed);
-            System.out.println(scoreTime);
-            switchToStartMenu();
+            showEndNotif();
         }
     }
-
     public void openTwoButtonsOnly() {
         int[] btnNumberStore = new int[2];
         int trueValue = 0;
@@ -636,9 +681,6 @@ public class F1MotorSportGameController {
         for (int i = 0; i < buttonsOpen.length; i++){
             buttonsOpen[i] = false;
         }
-        for (boolean b : buttonsOpen) {
-            System.out.println(b);
-        }
     }
     public void restrictions(boolean x){
         borderPane.setDisable(x);
@@ -651,7 +693,7 @@ public class F1MotorSportGameController {
             if (secondsElapsed == 180) {
 
                 try {
-                    switchToStartMenu();
+                    showEndNotif();
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -687,20 +729,16 @@ public class F1MotorSportGameController {
         resumeButton.setText(""); // Set text to empty string
         newGameButton.setStyle("-fx-background-color: transparent; ");
         newGameButton.setText("");
-        soundsButton.setStyle("-fx-background-color: transparent; ");
-        soundsButton.setText("");
         exitButton.setStyle("-fx-background-color: transparent; ");
         exitButton.setText("");
     }
     public void setButtonsVisible(){
-        menuVbox.setStyle("-fx-background-color: rgba(23,80,24,0.9);");
-        resumeButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian'; -fx-font-weight: bold; -fx-border-radius: 10px;");
+        menuVbox.setStyle("-fx-background-color: #C5C6C7;");
+        resumeButton.setStyle("-fx-background-color: #676765; -fx-text-fill: white; -fx-font-family: 'Gaussian'; -fx-font-weight: bold; -fx-border-radius: 10px;");
         resumeButton.setText("Resume");
-        newGameButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px;");
+        newGameButton.setStyle("-fx-background-color: #676765; -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px;");
         newGameButton.setText("New Game");
-        soundsButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px;");
-        soundsButton.setText("Sounds");
-        exitButton.setStyle("-fx-background-color: rgb(30,103,31); -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px; ");
+        exitButton.setStyle("-fx-background-color: #676765; -fx-text-fill: white; -fx-font-family: 'Gaussian';  -fx-font-weight: bold;  -fx-border-radius: 10px; ");
         exitButton.setText("Exit Game");
     }
     public void switchToDifficultySelectionWindow(ActionEvent e) throws IOException {
@@ -718,24 +756,10 @@ public class F1MotorSportGameController {
         stage.setScene(scene);
         stage.show();
     }
-    public String getVariable() {
-        return scoreTime;
-    }
-    private void switchToStartMenu() throws Exception {
 
-        // Stop the timeline
-        timeline.stop();
-        // Load StartMenu.fxml
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartMenu.fxml")));
-        // Get the current stage
-        Stage stage = (Stage) timerLabel.getScene().getWindow();
-        // Create a new scene with StartMenu.fxml
-        Scene scene = new Scene(root);
-        // Set the scene to the stage
-        stage.setScene(scene);
-        // Show the stage
-        stage.show();
-    }
+
+
+
     public void btn1ShowImage() throws Exception {
         Image btn1BackgroundImage = new Image(picturesUrl[0]);
         if (buttonsOpen[0]){
@@ -743,8 +767,8 @@ public class F1MotorSportGameController {
             buttonsOpen[0] = !buttonsOpen[0];
         } else {
             btn1_imageView = new ImageView(btn1BackgroundImage);
-            btn1_imageView.setFitHeight(70);
-            btn1_imageView.setFitWidth(70);
+            btn1_imageView.setFitHeight(80);
+            btn1_imageView.setFitWidth(80);
             btn1.setGraphic(btn1_imageView);
             buttonsOpen[0] = !buttonsOpen[0];
         }
@@ -757,8 +781,8 @@ public class F1MotorSportGameController {
             buttonsOpen[1] = !buttonsOpen[1];
         } else {
             btn2_imageView = new ImageView(btn2BackgroundImage);
-            btn2_imageView.setFitHeight(70);
-            btn2_imageView.setFitWidth(70);
+            btn2_imageView.setFitHeight(80);
+            btn2_imageView.setFitWidth(80);
             btn2.setGraphic(btn2_imageView);
             buttonsOpen[1] = !buttonsOpen[1];
         }
@@ -771,8 +795,8 @@ public class F1MotorSportGameController {
             buttonsOpen[2] = !buttonsOpen[2];
         } else {
             btn3_imageView = new ImageView(btn3BackgroundImage);
-            btn3_imageView.setFitHeight(70);
-            btn3_imageView.setFitWidth(70);
+            btn3_imageView.setFitHeight(80);
+            btn3_imageView.setFitWidth(80);
             btn3.setGraphic(btn3_imageView);
             buttonsOpen[2] = !buttonsOpen[2];
         }
@@ -1016,5 +1040,9 @@ public class F1MotorSportGameController {
             buttonsOpen[19] = !buttonsOpen[19];
         }
         match_Checker();
+    }
+
+    public void ScoreMaker() throws Exception{
+
     }
 }

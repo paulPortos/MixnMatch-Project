@@ -3,7 +3,7 @@
     -fx-background-size: cover;
 }
 .selection-box-button{
-    -fx-background-radius: 10px;
+
     -fx-min-width: 205px;
     -fx-min-height: 90px;
     -fx-max-width: 320px;
@@ -20,7 +20,7 @@
     -fx-background-color: rgba(127, 0, 166, 0.88);
 }
 .play-box-button{
-    -fx-background-radius: 10px;
+
     -fx-min-width: 50px;
     -fx-min-height: 20px;
     -fx-max-width: 70px;
@@ -42,4 +42,14 @@
     -fx-max-width: 100px;
     -fx-max-height: 120px;
     -fx-background-color: #0d0d46;
+}
+.backbtn{
+    -fx-border-radius: 40px;
+    -fx-font-family:gaussian;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-color: rgba(198, 0, 255, 0.88);
+}
+.backbtn:hover{
+    -fx-background-color: rgba(158, 0, 204, 0.88);
 }

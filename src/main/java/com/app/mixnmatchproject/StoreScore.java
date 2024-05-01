@@ -1,9 +1,15 @@
 package com.app.mixnmatchproject;
 
-public class StoreScore {
-    ClassroomGameController classroomGameController_EasyScore = new ClassroomGameController();
-    String classroomScoreEasy;
-    public StoreScore() {
-        classroomScoreEasy = classroomGameController_EasyScore.getVariable();
+import java.io.Serializable;
+
+public class StoreScore implements Serializable {
+    private String score;
+    String Score;
+    public StoreScore(String myScore) {
+        score = myScore;
     }
+    public String getScore(){
+        return score;
+    }
+
 }

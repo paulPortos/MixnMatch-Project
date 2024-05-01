@@ -38,3 +38,18 @@
 .btn:hover{
     -fx-background-color: rgb(144, 2, 189);
 }
+.difficulty-selectionBtn{
+    -fx-background-color: rgb(168, 0, 220);
+    -fx-font-family:gaussian;
+    -fx-font-size:20px ;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgb(0, 0, 0), 0.5, 0, 3,3);
+    -fx-padding: 10px;
+    -fx-pref-height: 100px;
+    -fx-pref-width: 200px;
+    -fx-margin: 10px;
+}
+.difficulty-selectionBtn:hover{
+    -fx-background-color: rgb(144, 2, 189);
+}

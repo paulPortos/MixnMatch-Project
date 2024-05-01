@@ -1,0 +1,92 @@
+.classroomgame-buttons {
+    -fx-background-color: #F5F5DC;
+    -fx-border-color: #595959;
+    -fx-border-width: 5px;
+}
+.classroomgame-buttons:hover {
+    -fx-background-color: #595959;
+    -fx-background-radius: 10px;
+}
+.background {
+    -fx-background-image: url('../../../images/CategoryPictures/Classroom/classroombg.jpg');
+    -fx-background-size: cover;
+    -fx-alignment: center;
+}
+.undertheseabackground {
+    -fx-background-image: url('../../../images/CategoryPictures/Under%20The%20Sea/undertheseabg.jpg');
+    -fx-background-size: cover;
+    -fx-alignment: center;
+}
+.safaribg{
+    -fx-background-image: url('../../../images/CategoryPictures/Safari/safaribg.jpg');
+    -fx-background-size: cover;
+    -fx-alignment: center;
+}
+.f1bg{
+    -fx-background-image: url('../../../images/CategoryPictures/F1%20Motorsports/f1bg.png');
+    -fx-background-size: cover;
+    -fx-alignment: center;
+}
+.timer{
+    -fx-fill: #000000;
+}
+.timer-background{
+    -fx-background-color: #909090;
+}
+
+
+.menu-background{
+    -fx-background-color: #676765;
+}
+
+
+
+.bottom-navigation-button {
+    -fx-background-color: #676765;
+    -fx-text-fill: white;
+}
+.bottom-navigation-button:hover{
+    -fx-background-color: #C5C6C7; /* Grey color */
+
+
+}
+
+.start-button {
+    -fx-background-color: #C5C6C7; /* Grey color */
+    -fx-background-radius: 5; /* Rounded corners */
+    -fx-padding: 10; /* Add padding for better visibility */
+    -fx-text-fill: #000000; /* Text color */
+}
+/* Style on hover */
+.start-button:hover {
+    -fx-background-color: #FFFDD0; /* Grey color */
+    -fx-text-fill: #000000;
+    -fx-opacity: 1; /* Restore full opacity on hover */
+}
+.start-button:pressed {
+    -fx-background-color: #005402; /* Grey color */
+    -fx-transition: opacity 1.5s; /* Apply transition effect to opacity over 1.5 seconds */
+    -fx-opacity: 0; /* Set initial opacity to 0 */
+}
+.transparent-background {
+     -fx-background-color: transparent;
+
+ }
+
+.gameFinished {
+    -fx-background-color: #350000
+}
+
+.gameFinishedText {
+    -fx-text-fill: white;
+    -fx-size:20px;
+}
+
+.btn{
+    -fx-background-color: rgb(168, 0, 220);
+    -fx-font-family:gaussian;
+    -fx-font-size:20px ;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgb(0, 0, 0), 0.5, 0, 3,3);
+}

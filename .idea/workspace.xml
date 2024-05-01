@@ -5,11 +5,117 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23172a70-53ca-490d-b266-707179b02cb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/F1MotorSportGameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameHardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/F1MotorSportHardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/SafariGameHardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/Scores.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/UnderTheSeaGameHardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/hard/HardF1MotorSportGame.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/hard/HardSafariGame.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/hard/HardUnderTheSeaGame.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/hard/css/easyDifficulty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/BerningUniforms.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/bboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/chalk.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/eraser.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/module.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/ppen.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/projector.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/ruler.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/black.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/car.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/champ.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/drift.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/f1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/ker.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/poster.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/trophy.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/African_leopard_male_(cropped).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/compass.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/deer.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/hipo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/jag.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/lens.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/licensed-image.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/rino.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/coral.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/crab.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/fish.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/gold.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/seahorse.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/treasure.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/virginiaclasssubmarine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/whale.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ClassroomGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/F1MotorSportGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/F1MotorSportGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/SafariGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/SafariGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/StoreScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/mixnmatchproject/StoreScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/DifficultySelectionWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/HighScore.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/InstructionScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/InstructionScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/StartMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/StartMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionEasy.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionHard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionHard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/ThemeSelectionMedium.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/DifficultySelection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/DifficultySelection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/Highscore.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/Highscore.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/Instruction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/Instruction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeEasy.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeEasy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeHard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeHard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeMedium.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/ThemeMedium.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyClassroomGame.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyF1MotorSportGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/EasyF1MotorSportGame.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/easy/css/easyDifficulty.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/medium/MediumClassroomGame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/gameDifficulty/hard/HardClassroomGame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Bag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Ballpen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Books.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Correction tape.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Desk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Notebooks.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Pencil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/TV.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/Teacher’s Desk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/White board.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Classroom/classroombg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alpha tauri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/alphine.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/aston martin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/ferrari.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/haas f1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/kick sauber.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mclaren.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/mercedez.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports/red bull racing honda.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/bird watching.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/etosha national park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/glampung site.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/kruger national park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/safari jeep.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/savannahs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/the big five.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/treehouse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Safari/wetland.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/blue hole.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/coral reefs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/jelly fish.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/kelp forests.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/mangrove forest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/scuba diving.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/sea snake.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/sea turtle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/Under The Sea/shark.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/bgmenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/app/mixnmatchproject/images/startScreen-Background.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +125,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -47,29 +153,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vahro/IdeaProjects/MixnMatch-Project&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/vahro/IdeaProjects/MixnMatch-Project/src/main/resources/com/app/mixnmatchproject/images/CategoryPictures/F1 Motorsports",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images\CategoryPictures\F1 Motorsports" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images\CategoryPictures\Classroom" />
-      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images" />
-      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\music" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images\CategoryPictures\Under The Sea" />
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images\CategoryPictures\Safari" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\java\com\app\mixnmatchproject" />
       <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject" />
+      <recent name="C:\Users\vahro\IdeaProjects\MixnMatch-Project\src\main\resources\com\app\mixnmatchproject\images\CategoryPictures\Classroom" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.app.mixnmatchproject" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.app.mixnmatchproject" />

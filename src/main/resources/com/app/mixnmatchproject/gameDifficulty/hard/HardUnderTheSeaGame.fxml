@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="752.0" prefWidth="786.0" styleClass="undertheseabackground" stylesheets="@css/easyDifficulty.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.mixnmatchproject.UnderTheSeaGameHardController">
+    <children>
+        <Button fx:id="btn2" layoutX="202.0" layoutY="107.0" mnemonicParsing="false" onAction="#btn2ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn3" layoutX="317.0" layoutY="107.0" mnemonicParsing="false" onAction="#btn3ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn1" layoutX="88.0" layoutY="107.0" mnemonicParsing="false" onAction="#btn1ShowImage" prefHeight="73.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn4" layoutX="427.0" layoutY="107.0" mnemonicParsing="false" onAction="#btn4ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn5" layoutX="535.0" layoutY="107.0" mnemonicParsing="false" onAction="#btn5ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn6" layoutX="642.0" layoutY="107.0" mnemonicParsing="false" onAction="#btn6ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn12" layoutX="642.0" layoutY="204.0" mnemonicParsing="false" onAction="#btn12ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn11" layoutX="535.0" layoutY="204.0" mnemonicParsing="false" onAction="#btn11ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn10" layoutX="427.0" layoutY="204.0" mnemonicParsing="false" onAction="#btn10ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn9" layoutX="317.0" layoutY="204.0" mnemonicParsing="false" onAction="#btn9ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn8" layoutX="202.0" layoutY="204.0" mnemonicParsing="false" onAction="#btn8ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn7" layoutX="88.0" layoutY="204.0" mnemonicParsing="false" onAction="#btn7ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn18" layoutX="642.0" layoutY="301.0" mnemonicParsing="false" onAction="#btn18ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn17" layoutX="534.0" layoutY="301.0" mnemonicParsing="false" onAction="#btn17ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn16" layoutX="427.0" layoutY="301.0" mnemonicParsing="false" onAction="#btn16ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn15" layoutX="317.0" layoutY="301.0" mnemonicParsing="false" onAction="#btn15ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn14" layoutX="202.0" layoutY="301.0" mnemonicParsing="false" onAction="#btn14ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn13" layoutX="88.0" layoutY="301.0" mnemonicParsing="false" onAction="#btn13ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn19" layoutX="88.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn19ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn20" layoutX="202.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn20ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Pane layoutX="293.0" prefHeight="51.0" prefWidth="200.0" styleClass="timer-background" stylesheets="@css/easyDifficulty.css">
+            <children>
+                <Label fx:id="timerLabel" alignment="CENTER" layoutX="13.0" layoutY="4.0" prefHeight="43.0" prefWidth="174.0" textFill="#f7f2f2">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane blendMode="SRC_ATOP" layoutX="-2.0" layoutY="701.0" prefHeight="51.0" prefWidth="792.0" styleClass="timer-background" stylesheets="@css/easyDifficulty.css">
+            <children>
+                <Button mnemonicParsing="false" onAction="#openGameMenu" prefHeight="51.0" prefWidth="68.0" styleClass="bottom-navigation-button" text="Menu">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+            </children>
+        </Pane>
+        <Button fx:id="btn22" layoutX="427.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn22ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn23" layoutX="535.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn23ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn24" layoutX="642.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn24ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn25" layoutX="88.0" layoutY="497.0" mnemonicParsing="false" onAction="#btn25ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn26" layoutX="202.0" layoutY="497.0" mnemonicParsing="false" onAction="#btn26ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn27" layoutX="317.0" layoutY="497.0" mnemonicParsing="false" onAction="#btn27ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn28" layoutX="427.0" layoutY="497.0" mnemonicParsing="false" onAction="#btn28ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn29" layoutX="535.0" layoutY="497.0" mnemonicParsing="false" onAction="#btn29ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn30" layoutX="642.0" layoutY="497.0" mnemonicParsing="false" onAction="#btn30ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn31" layoutX="88.0" layoutY="593.0" mnemonicParsing="false" onAction="#btn31ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn32" layoutX="202.0" layoutY="593.0" mnemonicParsing="false" onAction="#btn32ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn34" layoutX="427.0" layoutY="593.0" mnemonicParsing="false" onAction="#btn34ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn35" layoutX="535.0" layoutY="593.0" mnemonicParsing="false" onAction="#btn35ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn36" layoutX="642.0" layoutY="593.0" mnemonicParsing="false" onAction="#btn36ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn21" layoutX="317.0" layoutY="399.0" mnemonicParsing="false" onAction="#btn21ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Button fx:id="btn33" layoutX="317.0" layoutY="593.0" mnemonicParsing="false" onAction="#btn33ShowImage" prefHeight="74.0" prefWidth="86.0" styleClass="classroomgame-buttons" stylesheets="@../easy/css/easyDifficulty.css" />
+        <Pane fx:id="borderPane" layoutX="33.0" layoutY="92.0" prefHeight="590.0" prefWidth="739.0">
+            <children>
+                <Pane fx:id="menuPane" layoutX="255.0" layoutY="10.0" prefHeight="473.0" prefWidth="227.0" styleClass="transparent-background" stylesheets="@css/easyDifficulty.css">
+                    <children>
+                        <VBox fx:id="menuVbox" layoutX="-3.0" layoutY="-2.0" prefHeight="479.0" prefWidth="235.0" styleClass="transparent-background" stylesheets="@css/easyDifficulty.css">
+                            <children>
+                                <Button fx:id="resumeButton" mnemonicParsing="false" onAction="#openGameMenu" prefHeight="50.0" prefWidth="235.0" styleClass="transparent-background">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <Button fx:id="newGameButton" mnemonicParsing="false" onAction="#switchToDifficultySelectionWindow" prefHeight="50.0" prefWidth="235.0" styleClass="transparent-background">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <Button fx:id="exitButton" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="50.0" prefWidth="235.0" styleClass="transparent-background">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <Pane fx:id="endNotifPanel" layoutX="238.0" layoutY="282.0" prefHeight="200.0" prefWidth="355.0" styleClass="gameFinished">
+            <children>
+                <Label fx:id="endNotifLabel" layoutX="64.0" layoutY="8.0" prefHeight="92.0" prefWidth="227.0" styleClass="gameFinishedText">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <Button fx:id="endNotifBtn" layoutX="129.0" layoutY="119.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="43.0" prefWidth="98.0" styleClass="btn" text="Home" />
+            </children>
+        </Pane>
+        <Button fx:id="startButton" layoutX="6.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressStart" prefHeight="230.0" prefWidth="778.0" text="Start">
+            <styleClass>
+                <String fx:value="bottom-navigation-button" />
+                <String fx:value="start-button" />
+            </styleClass>
+            <font>
+                <Font size="99.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

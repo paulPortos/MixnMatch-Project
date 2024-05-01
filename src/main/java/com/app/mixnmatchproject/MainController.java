@@ -34,9 +34,10 @@ public class MainController {
     public boolean safariPlay;
     public boolean underTheSeaPlay;
 
+
     @FXML
     public void displayClassroomSelectionEasy() {
-        classroomImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Books.jpg")));
+        classroomImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/classroombg.jpg")));
         category.setImage(classroomImage);
         classroomPlay = true;
         f1MotorSportPlay = false;
@@ -44,7 +45,7 @@ public class MainController {
         underTheSeaPlay = false;
     }
     public void displayF1MotorSportsSelectionEasy() {
-        f1MotorsportImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Notebooks.jpg")));
+        f1MotorsportImage = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/F1 Motorsports/f1bg.png")));
         category.setImage(f1MotorsportImage);
         classroomPlay = false;
         f1MotorSportPlay = true;
@@ -52,7 +53,7 @@ public class MainController {
         underTheSeaPlay = false;
     }
     public void displaySafariSelectionEasy() {
-        safari = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Desk.jpg")));
+        safari = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Safari/safaribg.jpg")));
         category.setImage(safari);
         classroomPlay = false;
         f1MotorSportPlay = false;
@@ -60,7 +61,7 @@ public class MainController {
         underTheSeaPlay = false;
     }
     public void displayUnderTheSeaSelectionEasy() {
-        underTheSea = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Classroom/Pencil.png")));
+        underTheSea = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/CategoryPictures/Under The Sea/undertheseabg.jpg")));
         category.setImage(underTheSea);
         classroomPlay = false;
         f1MotorSportPlay = false;
@@ -73,25 +74,60 @@ public class MainController {
     }
     public void playerChoiceChecker(ActionEvent e) throws IOException{
         Parent classroomGamefx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyClassroomGame.fxml")));
-        Parent safarifx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyF1MotorSportGame.fxml")));
+        Parent safarifx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasySafariGame.fxml")));
         Parent f1MotorSportfx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyF1MotorSportGame.fxml")));
-        Parent underTheSeafx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyF1MotorSportGame.fxml")));
+        Parent underTheSeafx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/easy/EasyUnderTheSeaGame.fxml")));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         if(classroomPlay){
             scene = new Scene(classroomGamefx);
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
         } else if (f1MotorSportPlay) {
             scene = new Scene(f1MotorSportfx);
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
         } else if (safariPlay) {
             scene = new Scene(safarifx);
+            stage.setResizable(false);
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
         } else if (underTheSeaPlay) {
             scene = new Scene(underTheSeafx);
             stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        }
+    }
+
+    public void playerChoiceCheckerHard(ActionEvent e) throws IOException{
+        Parent classroomGamefx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/hard/HardClassroomGame.fxml")));
+        Parent safarifx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/hard/HardSafariGame.fxml")));
+        Parent f1MotorSportfx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/hard/HardF1MotorSportGame.fxml")));
+        Parent underTheSeafx = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("gameDifficulty/hard/HardUnderTheSeaGame.fxml")));
+        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+        if(classroomPlay) {
+            scene = new Scene(classroomGamefx);
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } else if (f1MotorSportPlay) {
+            scene = new Scene(f1MotorSportfx);
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } else if (safariPlay) {
+            scene = new Scene(safarifx);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+        } else if (underTheSeaPlay) {
+            scene = new Scene(underTheSeafx);
+            stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
         }
     }
@@ -101,14 +137,7 @@ public class MainController {
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToMediumSelectionScene(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ThemeSelectionHard.fxml")));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -117,6 +146,7 @@ public class MainController {
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -125,14 +155,7 @@ public class MainController {
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToHighScoreScene(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HighScore.fxml")));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -141,6 +164,7 @@ public class MainController {
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -149,6 +173,7 @@ public class MainController {
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

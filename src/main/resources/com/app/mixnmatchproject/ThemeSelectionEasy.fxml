@@ -4,6 +4,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="752.0" prefWidth="786.0" styleClass="themeeasybg" stylesheets="@css/ThemeEasy.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.mixnmatchproject.MainController">
@@ -19,15 +20,20 @@
                </children>
             </VBox>
             <Button layoutX="124.0" layoutY="574.0" minHeight="65.0" minWidth="144.0" mnemonicParsing="false" onAction="#playerChoiceChecker" prefHeight="65.0" prefWidth="144.0" styleClass="play-box-button" stylesheets="@css/ThemeEasy.css" text="Play" textFill="WHITE" />
+            <Button layoutX="33.0" layoutY="40.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="40.0" prefWidth="78.0" styleClass="backbtn" stylesheets="@css/ThemeEasy.css" text="Back" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="429.0" prefHeight="754.0" prefWidth="249.0">
          <children>
-            <ImageView fx:id="category" fitHeight="162.0" fitWidth="226.0" layoutX="29.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true" styleClass="image_view-selectionScreen">
-               <image>
-                  <Image url="@images/CategoryPictures/Classroom/Ballpen.jpg" />
-               </image>
-            </ImageView>
+            <Pane layoutX="5.0" layoutY="153.0" prefHeight="157.0" prefWidth="239.0">
+               <children>
+                  <ImageView fx:id="category" fitHeight="201.0" fitWidth="256.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" styleClass="image_view-selectionScreen">
+                     <image>
+                        <Image url="@images/CategoryPictures/Classroom/Ballpen.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>

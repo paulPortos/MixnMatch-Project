@@ -12,13 +12,14 @@
             <children>
                 <VBox layoutY="138.0" prefHeight="342.0" prefWidth="318.0" stylesheets="@css/main.css">
                     <children>
-                        <Button fx:id="classroomBtn" maxWidth="255.0" mnemonicParsing="false" onAction="#noFunc" prefHeight="80.0" prefWidth="255.0" styleClass="selection-box-button" stylesheets="@css/ThemeHard.css" text="Classroom" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#noFunc" prefHeight="78.0" prefWidth="324.0" styleClass="selection-box-button" stylesheets="@css/ThemeHard.css" text="F1 Motorsport" textFill="WHITE" />
-                        <Button maxWidth="326.0" mnemonicParsing="false" onAction="#noFunc" prefHeight="71.0" prefWidth="326.0" styleClass="selection-box-button" stylesheets="@css/ThemeHard.css" text="Safari" textFill="WHITE" />
-                        <Button mnemonicParsing="false" onAction="#noFunc" prefHeight="72.0" prefWidth="246.0" styleClass="selection-box-button" stylesheets="@css/ThemeMedium.css" text="Under the sea" textFill="WHITE" />
+                        <Button fx:id="classroomBtn" maxWidth="255.0" mnemonicParsing="false" onAction="#displayClassroomSelectionEasy" prefHeight="80.0" prefWidth="255.0" styleClass="selection-box-button" stylesheets="@css/ThemeHard.css" text="Classroom" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#displayF1MotorSportsSelectionEasy" prefHeight="78.0" prefWidth="324.0" styleClass="selection-box-button" stylesheets="@css/ThemeHard.css" text="F1 Motorsport" textFill="WHITE" />
+                        <Button maxWidth="326.0" mnemonicParsing="false" onAction="#displaySafariSelectionEasy" prefHeight="71.0" prefWidth="326.0" styleClass="selection-box-button" stylesheets="@css/ThemeHard.css" text="Safari" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#displayUnderTheSeaSelectionEasy" prefHeight="72.0" prefWidth="246.0" styleClass="selection-box-button" stylesheets="@css/ThemeMedium.css" text="Under the sea" textFill="WHITE" />
                     </children>
                 </VBox>
-                <Button layoutX="133.0" layoutY="587.0" mnemonicParsing="false" onAction="#playerChoiceChecker" styleClass="play-box-button" stylesheets="@css/ThemeHard.css" text="Play" textFill="WHITE" />
+                <Button layoutX="124.0" layoutY="572.0" maxHeight="46.0" maxWidth="78.0" mnemonicParsing="false" onAction="#playerChoiceCheckerHard" prefHeight="46.0" prefWidth="78.0" styleClass="play-box-button" stylesheets="@css/ThemeHard.css" text="Play" textFill="WHITE" />
+            <Button layoutX="25.0" layoutY="22.0" maxHeight="45.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="45.0" prefWidth="70.0" styleClass="backbtn" stylesheets="@gameDifficulty/hard/css/easyDifficulty.css" text="Back" textFill="WHITE" />
             </children>
         </AnchorPane>
         <AnchorPane layoutX="474.0" layoutY="14.0" prefHeight="754.0" prefWidth="249.0">
